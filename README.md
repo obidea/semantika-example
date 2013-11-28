@@ -13,6 +13,7 @@ ApplicationManager manager = new ApplicationFactory()
       .configure("configuration.xml")
       .createApplicationManager();
       
+// Create the materializer engine and use NTriples as the output format.
 MaterializerEngine materializer = manager.createMaterializerEngine().useNTriples();
 materializer.start();
 materializer.materialize(fout);
@@ -25,7 +26,7 @@ Command-line Tool
 Or, run the materializer immediately to get things done!
 
 ```
-semantika materialize -config=... -out=... -useNTriples
+semantika materialize -config=... -output=... -useNTriples
 ```
 
 Code Examples
