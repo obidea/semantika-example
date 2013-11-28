@@ -39,8 +39,8 @@ All the examples have been tested using [H2][5] (1.3), [MySQL][6] (5.6) and [Pos
 The examples above are using [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided in MySQL development site
 which can be downloaded from [Launchpad](https://launchpad.net/test-db/)
 
-**Note:** The dataset is prepared for MySQL, thus data migration is required for H2 and PostgreSQL. I use [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/)
-for SQuirreL SQL Client to do the migration.
+**Note:** The dataset is prepared for MySQL, thus data migration is required for running the examples in H2 and PostgreSQL. I use 
+[DBCopy Plugin](http://dbcopyplugin.sourceforge.net/) for SQuirreL SQL Client to do the migration.
 
   [1]: http://www.w3.org/TR/n-triples/   "W3C recommendation on NTriples syntax"
   [2]: http://www.w3.org/TR/turtle/   "W3C recommendation on Turtle syntax"
