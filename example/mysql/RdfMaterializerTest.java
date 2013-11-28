@@ -105,7 +105,9 @@ public class RdfMaterializerTest
    public void testRdfJsonMaterializer() throws ConfigurationException, MaterializationException, IOException
    {
       // Create an application manager using the given configuration resource.
-      ApplicationManager manager = new ApplicationFactory().configure("example/mysql/configuration.xml").createApplicationManager();
+      ApplicationManager manager = new ApplicationFactory()
+            .configure("example/mysql/configuration.xml")
+            .createApplicationManager();
       
       // Obtain the materializer engine from the manager and set the format to RDF/JSON.
       MaterializerEngine materializer = manager.createMaterializerEngine().useRdfJson();
