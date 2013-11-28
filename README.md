@@ -26,7 +26,7 @@ Command-line Tool
 Or, run the materializer immediately to get things done!
 
 ```
-semantika materialize -config=... -output=... -useNTriples
+./semantika materialize -config=... -output=... -useNTriples
 ```
 
 Code Examples
