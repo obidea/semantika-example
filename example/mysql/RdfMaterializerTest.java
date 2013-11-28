@@ -25,7 +25,9 @@ public class RdfMaterializerTest
    public void testNTriplesMaterializer() throws ConfigurationException, MaterializationException, IOException
    {
       // Create an application manager using the given configuration resource.
-      ApplicationManager manager = new ApplicationFactory().configure("example/mysql/configuration.xml").createApplicationManager();
+      ApplicationManager manager = new ApplicationFactory()
+            .configure("example/mysql/configuration.xml")
+            .createApplicationManager();
       
       // Obtain the materializer engine from the manager and set the format to NTriples.
       MaterializerEngine materializer = manager.createMaterializerEngine().useNTriples();
@@ -51,7 +53,9 @@ public class RdfMaterializerTest
    public void testTurtleMaterializer() throws ConfigurationException, MaterializationException, IOException
    {
       // Create an application manager using the given configuration resource.
-      ApplicationManager manager = new ApplicationFactory().configure("example/mysql/configuration.xml").createApplicationManager();
+      ApplicationManager manager = new ApplicationFactory()
+            .configure("example/mysql/configuration.xml")
+            .createApplicationManager();
       
       // Obtain the materializer engine from the manager and set the format to Turtle.
       MaterializerEngine materializer = manager.createMaterializerEngine().useTurtle();
@@ -75,7 +79,9 @@ public class RdfMaterializerTest
    public void testRdfXmlMaterializer() throws ConfigurationException, MaterializationException, IOException
    {
       // Create an application manager using the given configuration resource.
-      ApplicationManager manager = new ApplicationFactory().configure("example/mysql/configuration.xml").createApplicationManager();
+      ApplicationManager manager = new ApplicationFactory()
+            .configure("example/mysql/configuration.xml")
+            .createApplicationManager();
       
       // Obtain the materializer engine from the manager and set the format to RDF/XML.
       MaterializerEngine materializer = manager.createMaterializerEngine().useRdfXml();
