@@ -22,13 +22,13 @@ materializer.stop();
 Command-line Tool
 -----------------
 
-(incoming!)
+(coming soon!)
 
 
 Code Examples
 -------------
 
-Look at real [code examples](https://github.com/obidea/semantika-materializer/tree/master/example) which includes:
+The [code examples](https://github.com/obidea/semantika-materializer/tree/master/example) include:
 * How to materialize in [NTriples][1] format
 * How to materialize in [Turtle][2] format
 * How to materialize in [RDF/XML][3] format
@@ -36,11 +36,11 @@ Look at real [code examples](https://github.com/obidea/semantika-materializer/tr
 
 All the examples have been tested using [H2][5] (1.3), [MySQL][6] (5.6) and [PostgreSQL][7] (9.3)
 
-Those examples above are using [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided by MySQL development site.
-The database is available from [Employees DB on Launchpad](https://launchpad.net/test-db/)
+The examples above are using [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided in MySQL development site
+which can be downloaded from [Launchpad](https://launchpad.net/test-db/)
 
-**Note:** The dataset is presented for MySQL, thus data migration is required for H2 and PostgreSQL. I use [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/)
-for [SQuirreL SQL Client](http://squirrel-sql.sourceforge.net/) to do the migration.
+**Note:** The dataset is prepared for MySQL, thus data migration is required for H2 and PostgreSQL. I use [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/)
+for SQuirreL SQL Client to do the migration.
 
   [1]: http://www.w3.org/TR/n-triples/   "W3C recommendation on NTriples syntax"
   [2]: http://www.w3.org/TR/turtle/   "W3C recommendation on Turtle syntax"
