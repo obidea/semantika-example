@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<program xmlns="http://www.obidea.com/ns/termal#"
+   xmlns:tml="http://www.obidea.com/ns/termal#"
+   xmlns:rr="http://www.w3.org/ns/r2rml#">
+   <prefix tml:name="" tml:ns="http://obidea.com/ex/ontology/work/" />
+
+   <uri-template tml:name="Department" tml:value="http://obidea.com/ex/ontology/work/department/{1}/" />
+   <uri-template tml:name="Employee" tml:value="http://obidea.com/ex/ontology/work/employee/{1}/" />
+
+   <mapping tml:label="Department's name">
+      <logical-table rr:tableName="DEPARTMENTS" />
+      <subject-map rr:class="Department" rr:template="Department(DEPT_NO)"/>
+      <predicate-object-map rr:predicate="name" rr:column="DEPT_NAME"/>
+   </mapping>
+   <mapping tml:label="Employee works in a department">
+      <logical-table rr:tableName="DEPT_EMP"/>
+      <subject-map rr:template="Employee(EMP_NO)"/>
+      <predicate-object-map rr:predicate="worksIn"rr:template="Department(DEPT_NO)"/>
+      <predicate-object-map rr:predicate="worksFromDate"rr:column="FROM_DATE"/>
+      <predicate-object-map rr:predicate="worksToDate"rr:column="TO_DATE"/>
+   </mapping>
+   <mapping tml:label="Manager leads a department">
+      <logical-table rr:tableName="DEPT_EMP"/>
+      <subject-map rr:template="Employee(EMP_NO)"/>
+      <predicate-object-map rr:predicate="leads"rr:template="Department(DEPT_NO)"/>
+      <predicate-object-map rr:predicate="worksFromDate"rr:column="FROM_DATE"/>
+      <predicate-object-map rr:predicate="worksToDate"rr:column="TO_DATE"/>
+   </mapping>
+   <mapping tml:label="Employee profile">
+      <logical-table rr:tableName="EMPLOYEES"/>
+      <subject-map rr:template="Employee(EMP_NO)"/>
+      <predicate-object-map rr:predicate="birthDate" rr:column="BIRTH_DATE"/>
+      <predicate-object-map rr:predicate="firstName"rr:column="FIRST_NAME"/>
+      <predicate-object-map rr:predicate="lastName"rr:column="LAST_NAME"/>
+      <predicate-object-map rr:predicate="gender"rr:column="GENDER"/>
+      <predicate-object-map rr:predicate="hireDate"rr:column="HIRE_DATE"/>
+   </mapping>
+   <mapping tml:label="Employee's salary">
+      <logical-table rr:tableName="SALARIES"/>
+      <subject-map rr:template="Employee(EMP_NO)"/>
+      <predicate-object-map rr:predicate="salaryAmount" rr:column="SALARY"/>
+      <predicate-object-map rr:predicate="worksFromDate"rr:column="FROM_DATE"/>
+      <predicate-object-map rr:predicate="worksToDate"rr:column="TO_DATE"/>
+   </mapping>
+      <mapping tml:label="Employee's title">
+      <logical-table rr:tableName="TITLES"/>
+      <subject-map rr:template="Employee(EMP_NO)"/>
+      <predicate-object-map rr:predicate="titleName" rr:column="TITLE"/>
+      <predicate-object-map rr:predicate="worksFromDate"rr:column="FROM_DATE"/>
+      <predicate-object-map rr:predicate="worksToDate"rr:column="TO_DATE"/>
+    </mapping>
+</program>
