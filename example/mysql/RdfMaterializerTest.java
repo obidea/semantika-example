@@ -14,12 +14,7 @@ import com.obidea.semantika.materializer.MaterializerEngine;
 public class RdfMaterializerTest
 {
    /**
-    * This example shows how to materialize RDB rows into RDF data in NTriples format where the
-    * back-end database used is MySQL.
-    *
-    * @throws ConfigurationException
-    * @throws MaterializationException
-    * @throws IOException
+    * This example shows how to materialize RDB rows into RDF data in NTriples format.
     */
    @Test
    public void testNTriplesMaterializer() throws ConfigurationException, MaterializationException, IOException
@@ -42,12 +37,7 @@ public class RdfMaterializerTest
    }
 
    /**
-    * This example shows how to materialize RDB rows into RDF data in Turtle format where the
-    * back-end database used is MySQL.
-    *
-    * @throws ConfigurationException
-    * @throws MaterializationException
-    * @throws IOException
+    * This example shows how to materialize RDB rows into RDF data in Turtle format.
     */
    @Test
    public void testTurtleMaterializer() throws ConfigurationException, MaterializationException, IOException
@@ -68,12 +58,7 @@ public class RdfMaterializerTest
    }
 
    /**
-    * This example shows how to materialize RDB rows into RDF data in RDF/XML format where the
-    * back-end database used is MySQL.
-    *
-    * @throws ConfigurationException
-    * @throws MaterializationException
-    * @throws IOException
+    * This example shows how to materialize RDB rows into RDF data in RDF/XML format.
     */
    @Test
    public void testRdfXmlMaterializer() throws ConfigurationException, MaterializationException, IOException
@@ -94,12 +79,7 @@ public class RdfMaterializerTest
    }
 
    /**
-    * This example shows how to materialize RDB rows into RDF data in RDF/JSON-LD format where the
-    * back-end database used is MySQL.
-    *
-    * @throws ConfigurationException
-    * @throws MaterializationException
-    * @throws IOException
+    * This example shows how to materialize RDB rows into RDF data in RDF/JSON-LD format.
     */
    @Test
    public void testRdfJsonMaterializer() throws ConfigurationException, MaterializationException, IOException
