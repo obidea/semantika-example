@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE semantika-configuration PUBLIC
+   "-//Semantika/Semantika Configuration DTD//EN"
+   "http://www.obidea.com/semantika/dtd/semantika-configuration-1.0.dtd">
+
+<semantika-configuration>
+   <application-factory name="employees-app">
+      <data-source>
+         <property name="connection.url">jdbc:mysql://localhost:3306/employees-lite</property>
+         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+         <property name="connection.username">semantika</property>
+         <property name="connection.password">semantika</property>
+      </data-source>
+      <mapping-source resource="example/showcase/employees.xml" strict-parsing="false"/>
+   </application-factory>
+</semantika-configuration>
