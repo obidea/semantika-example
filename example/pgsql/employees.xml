@@ -7,26 +7,26 @@
    <uri-template tml:name="Department" tml:value="http://obidea.com/ex/ontology/work/department/{1}/" />
    <uri-template tml:name="Employee" tml:value="http://obidea.com/ex/ontology/work/employee/{1}/" />
 
-   <mapping tml:id="Department's name">
+   <mapping tml:id="TriplesMap1">
       <logical-table rr:tableName="departments" />
       <subject-map rr:class="Department" rr:template="Department(dept_no)"/>
       <predicate-object-map rr:predicate="name" rr:column="dept_name"/>
    </mapping>
-   <mapping tml:id="Employee works in a department">
+   <mapping tml:id="TriplesMap2">
       <logical-table rr:tableName="dept_emp"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="worksIn" rr:template="Department(dept_no)"/>
       <predicate-object-map rr:predicate="worksFromDate" rr:column="from_date"/>
       <predicate-object-map rr:predicate="worksToDate" rr:column="to_date"/>
    </mapping>
-   <mapping tml:id="Manager leads a department">
+   <mapping tml:id="TriplesMap3">
       <logical-table rr:tableName="dept_emp"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="leads" rr:template="Department(dept_no)"/>
       <predicate-object-map rr:predicate="worksFromDate" rr:column="from_date"/>
       <predicate-object-map rr:predicate="worksToDate" rr:column="to_date"/>
    </mapping>
-   <mapping tml:id="Employee's profile">
+   <mapping tml:id="TriplesMap4">
       <logical-table rr:tableName="employees"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="birthDate" rr:column="birth_date"/>
@@ -35,14 +35,14 @@
       <predicate-object-map rr:predicate="gender" rr:column="gender"/>
       <predicate-object-map rr:predicate="hireDate" rr:column="hire_date"/>
    </mapping>
-   <mapping tml:id="Employee's salary">
+   <mapping tml:id="TriplesMap5">
       <logical-table rr:tableName="salaries"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="salaryAmount" rr:column="salary"/>
       <predicate-object-map rr:predicate="worksFromDate" rr:column="from_date"/>
       <predicate-object-map rr:predicate="worksToDate" rr:column="to_date"/>
    </mapping>
-      <mapping tml:id="Employee's title">
+      <mapping tml:id="TriplesMap6">
       <logical-table rr:tableName="titles"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="titleName" rr:column="title"/>
