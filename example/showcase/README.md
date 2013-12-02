@@ -1,24 +1,23 @@
 Employees App
 =============
 
-A showcase example of Employees application. More extra features are added in the configuration and
-mapping file. The showcase presents two distinct settings:
-* Exclude ontology source, and
-* Include ontology source.
+A showcase in Employees application test. More extra features are added in the configuration and
+mapping file. The showcase presents two test cases in which we compare the materialization
+results to illustrate Semantika inference capability.
 
-Configuration Files
-===================
+Both test cases use the same mapping source and table data. However, the configuration files are
+slightly different:
 
-* *configuration1.xml* omits the `<ontology-source>` element. The system won't make any inference during 
-  its input processing. Notice that the `strict-parsing` option is disabled.
+* *configuration1.xml* omits the `<ontology-source>` element. The system won't make any inference 
+  during its input processing. Notice the `strict-parsing` option is disabled.
 
-* *configuratoin2.xml* includes the `<ontology-source>` element. The inclusion enables system to make
-  inference and add some extra triples to the end result.
+* *configuratoin2.xml* includes the `<ontology-source>` element. The inclusion enables system to 
+  make inference which add extra triples to the end result.
 
 Mapping File
 ============
 
-The example has eight mappings that highlight the syntax feature of the mapping language:
+Each test case has eight mappings that highlight the syntax feature of the mapping language:
 
 * **TriplesMap1**
   
@@ -31,23 +30,25 @@ The example has eight mappings that highlight the syntax feature of the mapping 
 
 * **TriplesMap3**, **TriplesMap4**
   
-  Users can write a *valid SQL query* for the logical table. However, [some limitations]
+  Users can write a *valid SQL query* for the logical table. Please note [some limitations]
   (https://github.com/obidea/semantika-materializer/wiki/2.2-&lt;logical&minus;table&gt;)
-  are applied.
+  that may applied.
 
 * **TriplesMap5**
   
-  Put a comment for describing the mappings using `<comment>...</comment>`
+  Put comments for describing the mapping using `<comment>...</comment>`
 
 * **TriplesMap6**
   
   Use multiple lines when writing the comments for readability.
 
 * **TriplesMap7**
-  Create a property mapping between two objects.
+  
+  Create a mapping for describing objects relationship. In OWL, it's called *object property*.
 
 * **TriplesMap8**
-  Use `rr:class` to specifically identify the class type used in the property's domain.
+  
+  Use `rr:class` to specifically identify the class type used in the property.
 
 Data Source
 ===========
