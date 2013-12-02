@@ -36,12 +36,21 @@
       <![CDATA[
         SELECT dept_emp.emp_no as employeeID
         FROM dept_emp JOIN titles ON dept_emp.emp_no = titles.emp_no
+        WHERE title = 'Staff']]>
+      </logical-table>
+      <subject-map rr:class="Staff" rr:template="Employee(employeeID)"/>
+   </mapping>
+   <mapping tml:id="TriplesMap5">
+      <logical-table>
+      <![CDATA[
+        SELECT dept_emp.emp_no as employeeID
+        FROM dept_emp JOIN titles ON dept_emp.emp_no = titles.emp_no
         WHERE title = 'Engineer']]>
       </logical-table>
       <subject-map rr:class="Engineer" rr:template="Employee(employeeID)"/>
       <comment>People who work as engineers</comment>
    </mapping>
-   <mapping tml:id="TriplesMap5">
+   <mapping tml:id="TriplesMap6">
       <logical-table>
       <![CDATA[
         SELECT dept_emp.emp_no as employeeID
@@ -54,23 +63,18 @@
         have worked in the company for more than 10 years.
       </comment>
    </mapping>
-   <mapping tml:id="TriplesMap6">
-      <logical-table>
-      <![CDATA[
-        SELECT dept_emp.emp_no as employeeID
-        FROM dept_emp JOIN titles ON dept_emp.emp_no = titles.emp_no
-        WHERE title = 'Staff']]>
-      </logical-table>
-      <subject-map rr:class="Staff" rr:template="Employee(employeeID)"/>
-   </mapping>
    <mapping tml:id="TriplesMap7">
-      <logical-table rr:tableName="dept_manager"/>
-      <subject-map rr:template="Employee(emp_no)"/>
-      <predicate-object-map rr:predicate="leads" rr:template="Department(dept_no)"/>
-   </mapping>
-      <mapping tml:id="TriplesMap8">
       <logical-table rr:tableName="dept_emp"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="worksIn" rr:template="Department(dept_no)"/>
+   </mapping>
+   <mapping tml:id="TriplesMap8">
+      <logical-table rr:tableName="dept_manager"/>
+      <subject-map rr:class="Manager" rr:template="Employee(emp_no)"/>
+      <predicate-object-map rr:predicate="leads" rr:template="Department(dept_no)"/>
+      <comment>
+        The subject-map specifies the people who lead are from class Manager. All rows
+        with emp_no values are managers.
+      </comment>
    </mapping>
 </program>
