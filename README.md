@@ -46,6 +46,11 @@ which can be downloaded from [Launchpad](https://launchpad.net/test-db/).
 **Note:** The dataset is prepared for MySQL, thus data migration is required for running the examples in H2 and PostgreSQL. I use 
 [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/) for SQuirreL SQL Client to do the migration.
 
+Wiki
+----
+
+Please visit https://github.com/obidea/semantika-materializer/wiki
+
   [1]: http://www.w3.org/TR/n-triples/   "W3C recommendation on NTriples syntax"
   [2]: http://www.w3.org/TR/turtle/   "W3C recommendation on Turtle syntax"
   [3]: http://www.w3.org/TR/rdf-syntax-grammar/   "W3C recommendation on RDF/XML syntax"
