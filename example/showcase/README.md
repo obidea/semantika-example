@@ -9,11 +9,11 @@ mapping file. The showcase presents two distinct settings:
 Configuration Files
 ===================
 
-* *configuration1.xml* omits the `<ontology-source>` element. The system won't make any deduction or
-  inference during its pre-processing. Notice that the strict-parsing option is disabled.
+* *configuration1.xml* omits the `<ontology-source>` element. The system won't make any inference during 
+  its input processing. Notice that the `strict-parsing` option is disabled.
 
-* *configuratoin2.xml* includes the `<ontology-source>` element. The system will add its deductions
-  to the end result.
+* *configuratoin2.xml* includes the `<ontology-source>` element. The inclusion enables system to make
+  inference and add some extra triples to the end result.
 
 Mapping File
 ============
@@ -21,21 +21,26 @@ Mapping File
 The example has eight mappings that highlight the syntax feature of the mapping language:
 
 * **TriplesMap1**
+  
   Simple and most standard use to define the RDB-to-RDF mappings (or shortly, R/R mappings).
 
 * **TriplesMap2**
+  
   The `rr:template` attribute can recognize some standard URI format used by Linked Data projects.
   Some of which that are supported are DBPedia (`+dbpedia`), YAGO (`+yago`) and LastFM (`+lastfm`).
 
 * **TriplesMap3**, **TriplesMap4**
+  
   Users can write a *valid SQL query* for the logical table. However, [some limitations]
   (https://github.com/obidea/semantika-materializer/wiki/2.2-&lt;logical&minus;table&gt;)
   are applied.
 
 * **TriplesMap5**
+  
   Put a comment for describing the mappings using `<comment>...</comment>`
 
 * **TriplesMap6**
+  
   Use multiple lines when writing the comments for readability.
 
 * **TriplesMap7**
