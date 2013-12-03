@@ -1,7 +1,7 @@
 RDB-to-RDF Materializer
 =======================
 
-An RDB-to-RDF materializer using Semantika engine. Download latest: [v0.5-alpha](https://github.com/obidea/semantika-materializer/releases)
+An RDB-to-RDF data exporter using Semantika engine. Download latest: [v0.5-alpha](https://github.com/obidea/semantika-materializer/releases)
 
 Java API
 --------
@@ -33,18 +33,18 @@ Code Examples
 -------------
 
 The [code examples](https://github.com/obidea/semantika-materializer/tree/master/example) include:
-* How to materialize in [NTriples][1] format,
-* How to materialize in [Turtle][2] format,
-* How to materialize in [RDF/XML][3] format,
-* How to materialize in [JSON-LD][4] format.
+* How to export data to [NTriples][1] format,
+* How to export data to [Turtle][2] format,
+* How to export data to [RDF/XML][3] format,
+* How to export data to [JSON-LD][4] format.
 
-All the examples have been tested using [H2][5] (1.3), [MySQL][6] (5.6) and [PostgreSQL][7] (9.3)
+All the examples have been tested and successfully run using [H2][5] (1.3), [MySQL][6] (5.6) and [PostgreSQL][7] (9.3)
 
-The examples above are using [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided in MySQL development site
-which can be downloaded from [Launchpad](https://launchpad.net/test-db/).
+For the sample data, I used [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided freely
+in MySQL development site. You can download it from [Launchpad](https://launchpad.net/test-db/).
 
-**Note:** The dataset is prepared for MySQL, thus data migration is required for running the examples in H2 and PostgreSQL. I use 
-[DBCopy Plugin](http://dbcopyplugin.sourceforge.net/) for SQuirreL SQL Client to do the migration.
+**Note:** The dataset is prepared for MySQL, thus data migration is required for running the other examples in H2 and 
+PostgreSQL. I use [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/) for SQuirreL SQL Client to do the migration.
 
 Wiki
 ----
