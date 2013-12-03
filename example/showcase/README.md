@@ -53,4 +53,4 @@ Below describes some mapping declarations that highlight some features in the ma
 Data Source
 ===========
 
-The showcase uses Employees-Lite dataset. The data is a subset of [Employees Sample Database](http://dev.mysql.com/doc/employee/en/index.html).
+The showcase uses Employees-Lite database for MySQL. The data is a subset of [Employees Sample Database](http://dev.mysql.com/doc/employee/en/index.html).
