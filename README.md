@@ -6,7 +6,7 @@ An RDB-to-RDF data exporter using Semantika engine. Download latest: [v0.5-alpha
 Java API
 --------
 
-Code directly within your Java application:
+Code the materializer directly inside your Java application:
 
 ```java
 ApplicationManager manager = new ApplicationFactory()
@@ -23,7 +23,7 @@ materializer.stop();
 Command-line Tool
 -----------------
 
-Or, run the materializer immediately to get things done!
+Or, just run the materializer to get things done immediately!
 
 ```
 ./semantika materialize -config=... -output=... -useNTriples
