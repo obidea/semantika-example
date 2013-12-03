@@ -1,7 +1,7 @@
 RDB-to-RDF Materializer
 =======================
 
-An RDB-to-RDF materializer using Semantika engine.
+An RDB-to-RDF materializer using Semantika engine. Download latest: [v0.5-alpha](https://github.com/obidea/semantika-materializer/releases)
 
 Java API
 --------
