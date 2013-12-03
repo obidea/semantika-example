@@ -5,20 +5,20 @@ Copyright 2013 Obidea
 Third party libraries
 ---------------------
 
-Parts of this product use software developed by C3P0
-(https://github.com/swaldman/c3p0). License: http://www.gnu.org/licenses/lgpl-2.1.html
+This product includes software developed by Machinery For Change, Inc.
+(http://www.mchange.com/projects/c3p0/). License: http://www.gnu.org/licenses/lgpl-2.1.html
 
-Parts of this product use software developed by The Jackson JSON Processor
-(http://jackson.codehaus.org/). License: http://www.apache.org/licenses/LICENSE-2.0
+This product includes software developed by FasterXML
+(https://github.com/FasterXML/jackson). License: http://www.apache.org/licenses/LICENSE-2.0
 
-Parts of this product use software developed by the JSQLParser
+This product includes software developed by JSQLParser
 (https://github.com/JSQLParser/JSqlParser). License: http://www.gnu.org/licenses/lgpl-2.1.html
 
-Parts of this product use software developed by the openRDF.org
+This product includes software developed by Aduna
 (http://www.openrdf.org/). License: http://opensource.org/licenses/BSD-3-Clause
 
-Parts of this product use software developed by the OWL-API
+This product includes software developed by the University of Manchester
 (http://owlapi.sourceforge.net/). License: http://www.apache.org/licenses/LICENSE-2.0
 
-Parts of this product use software developed by the SLF4J
+This product includes software developed by Quality Open Software, QOS.ch
 (www.slf4j.org/‎). License: http://opensource.org/licenses/MIT
