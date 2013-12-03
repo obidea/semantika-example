@@ -17,7 +17,7 @@ slightly different:
 Mapping File
 ============
 
-Each test case has eight mappings that highlight the syntax feature of the mapping language:
+Below describes some mapping declarations that highlight some features in the mapping language:
 
 * **TriplesMap1**
   
@@ -32,7 +32,7 @@ Each test case has eight mappings that highlight the syntax feature of the mappi
   
   Users can write a *valid SQL query* for the logical table. Please note [some limitations]
   (https://github.com/obidea/semantika-materializer/wiki/2.2-&lt;logical&minus;table&gt;)
-  that may applied.
+  that may apply.
 
 * **TriplesMap5**
   
