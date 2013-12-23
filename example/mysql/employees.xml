@@ -23,8 +23,8 @@
       <logical-table rr:tableName="dept_emp"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="leads" rr:template="Department(dept_no)"/>
-      <predicate-object-map rr:predicate="worksFromDate" rr:column="from_date"/>
-      <predicate-object-map rr:predicate="worksToDate" rr:column="to_date"/>
+      <predicate-object-map rr:predicate="leadsFromDate" rr:column="from_date"/>
+      <predicate-object-map rr:predicate="leadsToDate" rr:column="to_date"/>
    </mapping>
    <mapping tml:id="TriplesMap4">
       <logical-table rr:tableName="employees"/>
@@ -39,14 +39,14 @@
       <logical-table rr:tableName="salaries"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="salaryAmount" rr:column="salary"/>
-      <predicate-object-map rr:predicate="worksFromDate" rr:column="from_date"/>
-      <predicate-object-map rr:predicate="worksToDate" rr:column="to_date"/>
+      <predicate-object-map rr:predicate="salaryFromDate" rr:column="from_date"/>
+      <predicate-object-map rr:predicate="salaryToDate" rr:column="to_date"/>
    </mapping>
-      <mapping tml:id="TriplesMap6">
+   <mapping tml:id="TriplesMap6">
       <logical-table rr:tableName="titles"/>
       <subject-map rr:template="Employee(emp_no)"/>
       <predicate-object-map rr:predicate="titleName" rr:column="title"/>
-      <predicate-object-map rr:predicate="worksFromDate" rr:column="from_date"/>
-      <predicate-object-map rr:predicate="worksToDate" rr:column="to_date"/>
+      <predicate-object-map rr:predicate="titleFromDate" rr:column="from_date"/>
+      <predicate-object-map rr:predicate="titleToDate" rr:column="to_date"/>
     </mapping>
 </program>
