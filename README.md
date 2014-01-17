@@ -41,7 +41,7 @@ To provide a clear look on how to integrate the materializer in your Java applic
 All the examples have been tested and successfully run using [H2][5] (1.3), [MySQL][6] (5.6) and [PostgreSQL][7] (9.3)
 
 For the sample data, I used [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided freely
-at MySQL development site. You can download it from [Launchpad](https://launchpad.net/test-db/).
+at MySQL development site. You can download it from [Launchpad](https://launchpad.net/test-db/) and store locally.
 
 **Note:** The dataset is prepared for MySQL only, thus data migration is required for running the other examples in H2
 and PostgreSQL. I used [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/) for
