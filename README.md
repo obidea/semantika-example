@@ -32,11 +32,11 @@ Or, just run the materializer to get things done immediately!
 Code Examples
 -------------
 
-The [code examples](https://github.com/obidea/semantika-materializer/tree/master/example) include:
-* How to export data to [NTriples][1] format,
-* How to export data to [Turtle][2] format,
-* How to export data to [RDF/XML][3] format,
-* How to export data to [JSON-LD][4] format.
+To provide a clear look on how to integrate the materializer in your Java application, please have a look at the
+[code examples](https://github.com/obidea/semantika-materializer/tree/master/example). The examples include:
+* code snippet to export data using [NTriples][1], [Turtle][2], [RDF/XML][3] and [JSON-LD][4] format,
+* a configuration file, and
+* a mapping file
 
 All the examples have been tested and successfully run using [H2][5] (1.3), [MySQL][6] (5.6) and [PostgreSQL][7] (9.3)
 
