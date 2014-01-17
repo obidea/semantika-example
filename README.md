@@ -33,18 +33,19 @@ Code Examples
 -------------
 
 To provide a clear look on how to integrate the materializer in your Java application, please have a look at the
-[code examples](https://github.com/obidea/semantika-materializer/tree/master/example). The examples include:
-* code snippet to export data using [NTriples][1], [Turtle][2], [RDF/XML][3] and [JSON-LD][4] format,
-* a configuration file, and
-* a mapping file
+[code example](https://github.com/obidea/semantika-materializer/tree/master/example). The example includes:
+* code snippet how to export data using [NTriples][1], [Turtle][2], [RDF/XML][3] and [JSON-LD][4] format,
+* a configuration file (i.e., used to define DB connection), and
+* a mapping file (i.e., used as data-to-domain model).
 
 All the examples have been tested and successfully run using [H2][5] (1.3), [MySQL][6] (5.6) and [PostgreSQL][7] (9.3)
 
 For the sample data, I used [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided freely
-in MySQL development site. You can download it from [Launchpad](https://launchpad.net/test-db/).
+at MySQL development site. You can download it from [Launchpad](https://launchpad.net/test-db/).
 
-**Note:** The dataset is prepared for MySQL, thus data migration is required for running the other examples in H2 and 
-PostgreSQL. I use [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/) for SQuirreL SQL Client to do the migration.
+**Note:** The dataset is prepared for MySQL only, thus data migration is required for running the other examples in H2
+and PostgreSQL. I used [DBCopy Plugin](http://dbcopyplugin.sourceforge.net/) for
+[SQuirreL SQL Client](http://squirrel-sql.sourceforge.net/) for doing the migration.
 
 Wiki
 ----
@@ -58,5 +59,4 @@ Please visit https://github.com/obidea/semantika-materializer/wiki
   [5]: http://www.h2database.com/   "H2 site"
   [6]: http://www.mysql.com/   "MySQL site"
   [7]: http://www.postgresql.org/   "PostgreSQL site"
-
-
+  
