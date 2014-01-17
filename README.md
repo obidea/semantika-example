@@ -38,7 +38,7 @@ To provide a clear look on how to integrate the materializer in your Java applic
 * a configuration file (i.e., used to define DB connection), and
 * a mapping file (i.e., used as data-to-domain model).
 
-All the examples have been tested and successfully run using [H2][5] (1.3), [MySQL][6] (5.6) and [PostgreSQL][7] (9.3)
+All the examples have been tested and successfully run using [H2][5] (v1.3), [MySQL][6] (v5.6) and [PostgreSQL][7] (v9.3)
 
 For the sample data, I used [Employee Sample Database](http://dev.mysql.com/doc/employee/en/index.html) provided freely
 at MySQL development site. You can download it from [Launchpad](https://launchpad.net/test-db/) and store locally.
