@@ -6,11 +6,11 @@
 <semantika-configuration>
    <application-factory name="materializer-h2">
       <data-source>
-         <property name="connection.url">jdbc:h2:tcp://localhost/~/.h2-data/employees</property>
+         <property name="connection.url">jdbc:h2:tcp://localhost/empdb</property>
          <property name="connection.driver_class">org.h2.Driver</property>
-         <property name="connection.username">semantika</property>
-         <property name="connection.password">semantika</property>
+         <property name="connection.username">sa</property>
+         <property name="connection.password"></property>
       </data-source>
-      <mapping-source resource="example/h2/employees.xml" strict-parsing="false"/>
+      <mapping-source resource="model/empdb.tml.xml" strict-parsing="false"/>
    </application-factory>
 </semantika-configuration>

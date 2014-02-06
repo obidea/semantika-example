@@ -4,7 +4,8 @@ Semantika API
 A practical guide to integrate Semantika Core Framework in your Java application!
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
-Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika)
+
+Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika).
 
 Query Answer
 ------------
