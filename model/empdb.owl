@@ -58,13 +58,13 @@
         <ObjectProperty IRI="about"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="employs"/>
+        <ObjectProperty IRI="hasMember"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="leads"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="worksIn"/>
+        <ObjectProperty IRI="memberOf"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="birthDate"/>
@@ -124,8 +124,8 @@
         <Class IRI="Employee"/>
     </SubClassOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="employs"/>
-        <ObjectProperty IRI="worksIn"/>
+        <ObjectProperty IRI="memberOf"/>
+        <ObjectProperty IRI="hasMember"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="leads"/>
@@ -136,7 +136,7 @@
         <Class IRI="Department"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="worksIn"/>
+        <ObjectProperty IRI="memberOf"/>
         <Class IRI="Department"/>
     </ObjectPropertyRange>
 </Ontology>

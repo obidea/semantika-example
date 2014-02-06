@@ -10,7 +10,7 @@
    <mapping tml:id="TriplesMap1">
       <logical-table rr:tableName="DEPARTMENTS" />
       <subject-map rr:class="Department" rr:template="Department(DEPT_NO)"/>
-      <predicate-object-map rr:predicate="name" rr:column="DEPT_NAME"/>
+      <predicate-object-map rr:predicate="deptName" rr:column="DEPT_NAME"/>
    </mapping>
    <mapping tml:id="TriplesMap2">
       <logical-table rr:tableName="DEPT_EMP"/>
@@ -19,7 +19,7 @@
    </mapping>
    <mapping tml:id="TriplesMap3">
       <logical-table rr:tableName="DEPT_MANAGER"/>
-      <subject-map rr:template="Employee(EMP_NO)"/>
+      <subject-map rr:class="Manager" rr:template="Employee(EMP_NO)"/>
       <predicate-object-map rr:predicate="leads" rr:template="Department(DEPT_NO)"/>
    </mapping>
    <mapping tml:id="TriplesMap4">
