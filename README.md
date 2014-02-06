@@ -3,8 +3,11 @@ Semantika API
 
 A practical guide to integrate Semantika Core Framework in your Java application!
 
-Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
+Download latest: [v1.0](https://github.com/obidea/semantika-api/releases/download/v1.0/semantika-core-1.0.jar)
 
+Download extra: [Employee DB (empdb)](https://github.com/obidea/semantika-api/releases/download/v1.0/h2-semantika.zip)
+
+Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
 Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika).
 
 Query Answer
