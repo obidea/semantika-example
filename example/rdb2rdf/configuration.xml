@@ -11,6 +11,6 @@
          <property name="connection.username">sa</property>
          <property name="connection.password"></property>
       </data-source>
-      <mapping-source resource="model/empdb.tml.xml" strict-parsing="false"/>
+      <mapping-source resource="model/empdb.tml.xml" strict-parsing="false" />
    </application-factory>
 </semantika-configuration>
