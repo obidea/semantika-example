@@ -1,24 +1,29 @@
-Semantika API
-=============
-
-Learn the examples: A practical guide to start integrating Semantika Core Framework into your Java application right now!
+Learn the examples: A practical guide to start integrating Semantika Core Framework into your Java
+application right now!
 
 Download the API: [Semantika Core 1.0](https://github.com/obidea/semantika-api/releases/download/v1.0/semantika-core-1.0.jar)
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
 Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika).
 
-Query Answer
+System Setup
 ------------
 
-To enable query answer in your Java application:
-
+An instance of ApplicationManager class can be created by loading `configuration.xml` in your classpath
+(See [wiki](https://github.com/obidea/semantika-api/wiki/1.-XML-Configuration-File) for more details on
+Semantika configuration file).
 ```java
 ApplicationManager manager = new ApplicationFactory()
       .configure("configuration.xml")
       .createApplicationManager();
-      
-IQueryEngine queryEngine = mAppManager.createQueryEngine();
+```
+
+Query Answer
+------------
+
+To enable query answer in your Java application:
+```java
+IQueryEngine queryEngine = manager.createQueryEngine();
 queryEngine.start();
 IQueryResult result = queryEngine.evaluate(sparqlString);
 // do something with the result
@@ -29,11 +34,7 @@ queryEngine.stop();
 In addition, the "extended" query engine allows you to create result paging for efficient data retrieval:
 
 ```java
-ApplicationManager manager = new ApplicationFactory()
-      .configure("configuration.xml")
-      .createApplicationManager();
-      
-IQueryEngineExt queryEngine = mAppManager.createQueryEngine(); // use IQueryEngineExt
+IQueryEngineExt queryEngine = manager.createQueryEngine();
 queryEngine.start();
 int offset = 0;
 int limit = 100;
@@ -57,14 +58,10 @@ RDB2RDF Export
 To enable RDB2RDF data export in your Java application:
 
 ```java
-ApplicationManager manager = new ApplicationFactory()
-      .configure("configuration.xml")
-      .createApplicationManager();
-      
-IMaterializerEngine materializer = manager.createMaterializerEngine().useNTriples();
-materializer.start();
-materializer.materialize(fileOut);
-materializer.stop();
+IMaterializerEngine mat = manager.createMaterializerEngine().useNTriples();
+mat.start();
+mat.materialize(fileOut);
+mat.stop();
 ```
 
 What's Next?
