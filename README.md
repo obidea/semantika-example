@@ -26,7 +26,7 @@ IQueryResult result = queryEngine.evaluate(sparqlString);
 queryEngine.stop();
 ```
 
-In addition, an "extended" query engine supports paging and your application can be written:
+In addition, the "extended" query engine allows you to create result paging for efficient data retrieval:
 
 ```java
 ApplicationManager manager = new ApplicationFactory()
