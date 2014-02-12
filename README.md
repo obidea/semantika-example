@@ -66,3 +66,18 @@ materializer.start();
 materializer.materialize(fileOut);
 materializer.stop();
 ```
+
+What's Next?
+------------
+
+The upcoming 1.1 has several exciting features to come:
+
+* Implement QueryReducer that will minimize the number of joins in the final SQL production,
+resulting faster query execution.
+
+* Support SPARQL OPTIONAL keyword in input query.
+
+* Support datatype-able term map in mapping language to generate typed literals. Usually
+the datatype of literals are automatically determined based on the SQL datatype of the
+underlying logical table column. With the new sytax `rr:datatype` users can explicitly
+override the type and the system will produce a datatype-override RDF literal.
