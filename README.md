@@ -3,7 +3,7 @@ Semantika API
 
 Learn the examples: A practical guide to start integrating Semantika Core Framework into your Java application right now!
 
-Download latest release: [Semantika Core 1.0](https://github.com/obidea/semantika-api/releases/download/v1.0/semantika-core-1.0.jar)
+Download the API: [Semantika Core 1.0](https://github.com/obidea/semantika-api/releases/download/v1.0/semantika-core-1.0.jar)
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
 Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika).
