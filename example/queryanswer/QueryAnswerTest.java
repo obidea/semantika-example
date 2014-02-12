@@ -154,6 +154,6 @@ public class QueryAnswerTest
          LOG.debug(result.getValueList().toString());
       }
       LOG.info("{} row(s) returned\n", counter);
-      assertEquals(counter, expectedNumber);
+      assertEquals(expectedNumber, counter);
    }
 }
