@@ -1,7 +1,7 @@
 Learn the examples: A practical guide to start integrating Semantika Core Framework into your Java
 application right now!
 
-Download the API: [Semantika Core 1.0](https://github.com/obidea/semantika-api/releases/download/v1.0/semantika-core-1.0.jar)
+Download the library: [Semantika Core 1.1](https://github.com/obidea/semantika-api/releases/download/v1.1/semantika-core-1.1.jar)
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
 Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika).
@@ -14,8 +14,8 @@ An instance of ApplicationManager class can be created by loading `configuration
 Semantika configuration file).
 ```java
 ApplicationManager manager = new ApplicationFactory()
-      .configure("configuration.xml")
-      .createApplicationManager();
+             .configure("configuration.xml")
+             .createApplicationManager();
 ```
 
 Query Answer
@@ -23,9 +23,9 @@ Query Answer
 
 To enable query answer in your Java application:
 ```java
-IQueryEngine queryEngine = manager.createQueryEngine();
+IQueryEngine queryEngine = manager.createQueryEngine(); 
 queryEngine.start();
-IQueryResult result = queryEngine.evaluate(sparqlString);
+IQueryResult result = queryEngine.evaluate(sparql);
 // do something with the result
 // ...
 queryEngine.stop();
@@ -58,23 +58,20 @@ RDB2RDF Export
 To enable RDB2RDF data export in your Java application:
 
 ```java
-IMaterializerEngine mat = manager.createMaterializerEngine().useNTriples();
-mat.start();
-mat.materialize(fileOut);
-mat.stop();
+IMaterializerEngine exporter = manager.createMaterializerEngine().useNTriples();
+exporter.start();
+exporter.materialize(fout);
+exporter.stop();
 ```
 
 What's Next?
 ------------
 
-The upcoming 1.1 has several exciting features to come:
+The upcoming 1.2 has several exciting features to come:
 
-* Implement QueryReducer that will minimize the number of joins in the final SQL production,
-resulting faster query execution.
+* Add support to datatype-able term map in mapping language to generate typed literals.
+Usually the datatype of literals are automatically determined based on the SQL datatype
+of the underlying logical table column. With the new sytax `rr:datatype` users can 
+explicitly override the type and the system will produce a datatype-override RDF literal.
 
-* Support SPARQL OPTIONAL keyword in input query.
-
-* Support datatype-able term map in mapping language to generate typed literals. Usually
-the datatype of literals are automatically determined based on the SQL datatype of the
-underlying logical table column. With the new sytax `rr:datatype` users can explicitly
-override the type and the system will produce a datatype-override RDF literal.
+* More support on SPARQL built-in functions: `BOUND`, `LANG`, `LANGMATCHES` and `REGEX`.
