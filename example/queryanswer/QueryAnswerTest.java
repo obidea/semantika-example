@@ -110,9 +110,9 @@ public class QueryAnswerTest
             "{ ?x :memberOf ?y .\n" +
             "  ?y :deptName \"Finance\" .\n" +
             "  ?x :firstName ?fname; \n" +
-            "     :lastName ?lname; \n" + //$NON-NLS-1$
-            "     :hireDate ?hiredate; \n" + //$NON-NLS-1$
-            "     :salaryAmount ?salary . \n" + //$NON-NLS-1$
+            "     :lastName ?lname; \n" +
+            "     :hireDate ?hiredate; \n" +
+            "     :salaryAmount ?salary . \n" +
             "  FILTER ( ?hiredate > '1995-01-01' && ?salary > 50000) }"; //$NON-NLS-1$
       
       mQueryEngine.start();
@@ -131,14 +131,14 @@ public class QueryAnswerTest
             "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
             "SELECT ?fname ?lname \n" +
             "WHERE\n" +
-            "{ ?x :leads ?d .\n" +
-            "  ?y :memberOf ?d .\n" +
-            "  ?d :deptName \"Sales\" .\n" +
-            "  ?x :salaryAmount ?bossSalary .\n" +
-            "  ?y :firstName ?fname; \n" +
-            "     :lastName ?lname; \n" + //$NON-NLS-1$
-            "     :salaryAmount ?staffSalary . \n" + //$NON-NLS-1$
-            "  FILTER ( ?staffSalary > ?bossSalary ) }"; //$NON-NLS-1$
+            "{ ?boss :leads ?department .\n" +
+            "  ?staff :memberOf ?department .\n" +
+            "  ?department :deptName \"Sales\" .\n" +
+            "  ?boss :salaryAmount ?bossSalary .\n" +
+            "  ?staff :firstName ?fname; \n" +
+            "         :lastName ?lname; \n" +
+            "         :salaryAmount ?staffSalary . \n" + //$NON-NLS-1$
+            "  FILTER ( ?staffSalary > ?bossSalary  && ?boss != ?staff ) }"; //$NON-NLS-1$
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
@@ -153,7 +153,7 @@ public class QueryAnswerTest
          counter++;
          LOG.debug(result.getValueList().toString());
       }
-      LOG.info("{} row(s) returned\n", counter);
+      LOG.info("{} row(s) returned", counter);
       assertEquals(expectedNumber, counter);
    }
 }
