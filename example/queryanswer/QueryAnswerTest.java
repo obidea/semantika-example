@@ -137,12 +137,37 @@ public class QueryAnswerTest
             "  ?boss :salaryAmount ?bossSalary .\n" +
             "  ?staff :firstName ?fname; \n" +
             "         :lastName ?lname; \n" +
-            "         :salaryAmount ?staffSalary . \n" + //$NON-NLS-1$
+            "         :salaryAmount ?staffSalary . \n" +
             "  FILTER ( ?staffSalary > ?bossSalary  && ?boss != ?staff ) }"; //$NON-NLS-1$
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       assertTotalRow(result, 362);
+      mQueryEngine.stop();
+   }
+
+   @Test
+   public void testQuery6() throws Exception
+   {
+      /* 
+       * Query 6: Show all senior female employees that have salary at least 120K.
+       * Hire date can be optional.
+       */
+      final String sparql = 
+            "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
+            "SELECT ?fname ?lname ?salary ?hiredate \n" +
+            "WHERE\n" +
+            "{ ?staff :firstName ?fname; \n" +
+            "         :lastName ?lname; \n" +
+            "         :birthDate ?birthdate; \n" +
+            "         :gender \"F\"; \n" +
+            "         :salaryAmount ?salary . \n" +
+            "  OPTIONAL { ?staff :hireDate ?hiredate }\n" +
+            "  FILTER ( ?salary > 120000 && ?birthdate < '1952-12-31' ) }"; //$NON-NLS-1$
+      
+      mQueryEngine.start();
+      IQueryResult result = mQueryEngine.evaluate(sparql);
+      assertTotalRow(result, 13);
       mQueryEngine.stop();
    }
 
