@@ -48,7 +48,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
-      assertTotalRow(result, 5185);
+      assertTotalRow(result, 5048);
       mQueryEngine.stop();
    }
 
@@ -71,7 +71,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
-      assertTotalRow(result, 19951);
+      assertTotalRow(result, 19450);
       mQueryEngine.stop();
    }
 
@@ -117,7 +117,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
-      assertTotalRow(result, 195);
+      assertTotalRow(result, 188);
       mQueryEngine.stop();
    }
 
@@ -151,7 +151,7 @@ public class QueryAnswerTest
    {
       /* 
        * Query 6: Show all senior female employees that have salary at least 120K.
-       * Hire date can be optional.
+       * Hire date is optional (can be NULL).
        */
       final String sparql = 
             "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
