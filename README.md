@@ -75,3 +75,15 @@ of the underlying logical table column. With the new sytax `rr:datatype` users c
 explicitly override the type and the system will produce a datatype-override RDF literal.
 
 * More support on SPARQL built-in functions: `BOUND`, `LANG`, `LANGMATCHES` and `REGEX`.
+
+
+Q & A
+-----
+
+Some of you may have wondered about the missing source code of Semantika. The truth is
+the code is still in my private repository. I decided to keep the code privately because
+there are many refactors still happening and this situation can be unpleasant for those
+who want to study the code. However, I will remain to my true intention to make it open
+source and it will soon be published. In the meantime, your feedback is the most valuable
+matter that I wish to receive.
+
