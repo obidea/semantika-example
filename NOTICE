@@ -1,12 +1,9 @@
-The Semantika Materializer
-Copyright 2013 Obidea
+The Semantika API
+Copyright 2013-2014 Obidea
 -------------------------------------------------------------------------------
 
 Third party libraries
 ---------------------
-
-This product includes software developed by Machinery For Change, Inc.
-(http://www.mchange.com/projects/c3p0/). License: http://www.gnu.org/licenses/lgpl-2.1.html
 
 This product includes software developed by FasterXML
 (https://github.com/FasterXML/jackson). License: http://www.apache.org/licenses/LICENSE-2.0
@@ -22,3 +19,6 @@ This product includes software developed by the University of Manchester
 
 This product includes software developed by Quality Open Software, QOS.ch
 (www.slf4j.org/‎). License: http://opensource.org/licenses/MIT
+
+This produce includes software developed by Apache Commons
+(http://commons.apache.org). License: http://www.apache.org/licenses/
