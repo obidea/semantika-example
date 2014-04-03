@@ -63,8 +63,7 @@ contains dummy data about company workers stored in 6 separate tables.
 
 ### Installation
 
-The `empdb` database is available in H2 engine. To use the database, download the zip and unpack it:
-
+The `empdb` database is available in H2 engine. To run the database:
 ```
 $ cd path/to/h2-semantika
 $ ./h2.sh
