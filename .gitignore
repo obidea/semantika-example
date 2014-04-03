@@ -1,7 +1,6 @@
 .classpath
 .project
 .settings
-lib/
 *.class
 
 # Package Files #
