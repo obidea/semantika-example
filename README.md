@@ -1,7 +1,7 @@
 Learn the examples: A practical guide to start integrating Semantika Core Framework into your Java
 application right now!
 
-Download latest: [Semantika Core 1.1](https://github.com/obidea/semantika-api/releases/download/v1.1/semantika-core-1.1.jar) (Feb 25, 2014)
+Download latest: [Semantika Core 1.2](https://github.com/obidea/semantika-api/releases/download/v1.2/semantika-core-1.2.jar) (Apr 2, 2014)
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
 Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika).
@@ -41,9 +41,7 @@ int limit = 100;
 int maxPage = 10;
 int pageNum = 1;
 while (pageNum <= maxPage) {
-   IQueryResult result = queryEngine.createQuery(sparql)
-                                    .setFirstResult(offset)
-                                    .setMaxResults(limit).evaluate();
+   IQueryResult result = queryEngine.createQuery(sparql).setFirstResult(offset).setMaxResults(limit).evaluate();
    // do something with the result
    // ...
    offset += limit;
@@ -67,23 +65,26 @@ exporter.stop();
 What's Next?
 ------------
 
-The upcoming 1.2 has several exciting features to come:
+The upcoming 1.3 has several exciting features to come:
 
-* Add support to datatype-able term map in mapping language to generate typed literals.
-Usually the datatype of literals are automatically determined based on the SQL datatype
-of the underlying logical table column. With the new sytax `rr:datatype` users can 
-explicitly override the type and the system will produce a datatype-override RDF literal.
+* **Connection Pool**. Users will have the option to set a connection pool to handle
+  multiple concurrent requests without experiencing data service bottleneck.
 
-* More support on SPARQL built-in functions: `BOUND`, `LANG`, `LANGMATCHES` and `REGEX`.
+* **User's Query**. Users will be able to write more complex SQL in the mapping without
+  having the worry the system may rejected it. This feature is highly beneficial for
+  the RDB2RDF feature.
+
+* **Multiple Input Mapping Files**. The configuration file will be able to handle
+  multiple mapping files as input. The purpose is to allow users working in separate
+  mappings and load them collectively during the runtime.
 
 
 Q & A
 -----
 
-Some of you may have wondered about the missing source code of Semantika. The truth is
-the code is still in my private repository. I decided to keep the code privately because
-there are many refactors still happening and this situation can be unpleasant for those
-who want to study the code. However, I will remain to my true intention to make it open
-source and it will soon be published. In the meantime, your feedback is the most valuable
-matter that I wish to receive.
+Some of you may have wondered about the missing source code of Semantika. This is true
+because the code is still in my private repository. I decided to keep the code privately
+because there are still many code refactors happening and this situation can be unpleasant
+for those who want to study the code. However, I will remain to my true intention to make
+it open source and it will soon be published. So stay tune!
 
