@@ -237,27 +237,6 @@ public class QueryAnswerTest
       mQueryEngine.stop();
    }
 
-   @Test
-   public void testQuery10() throws Exception
-   {
-      /* 
-       * Query 10: Show employees that got comments in Spanish
-       */
-      final String sparql = 
-            "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
-            "SELECT ?fname ?lname ?text \n" +
-            "WHERE\n" +
-            "{ ?staff :firstName ?fname; \n" +
-            "         :lastName ?lname; \n" +
-            "         :comment ?text . \n" +
-            "  FILTER ( lang(?text) = 'es' ) }"; //$NON-NLS-1$
-      
-      mQueryEngine.start();
-      IQueryResult result = mQueryEngine.evaluate(sparql);
-      assertTotalRow(result, 1);
-      mQueryEngine.stop();
-   }
-
    private void assertTotalRow(IQueryResult result, int expectedNumber) throws SQLException
    {
       int counter = 0;
