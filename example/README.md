@@ -1,4 +1,60 @@
-## Example Database
+## Run the Examples
+
+The examples above run as JUnit tests. If you are familiar with Eclipse, you can clone and import this project to Eclipse and run the JUnit tests. However in this tutorial, I'm going to show how to run the examples via the command lines.
+
+**Step 1: Prepare the database**
+
+If you haven't done this before [please jump to this page and follow the installation guide](https://github.com/obidea/semantika-api/tree/master/example#example-database). Then return to this section later when you have finished. Make sure the H2 server is running.
+
+**Step 2: Get the project**
+
+There are two ways to download the content of this project: (1) Using Git or (2) Download the ZIP.
+
+* Using Git
+```
+git clone https://github.com/obidea/semantika-api.git
+```
+
+* [Download the ZIP](https://github.com/obidea/semantika-api/archive/master.zip) and unzip it.
+
+
+**Step 3: Compile the tests**
+
+To compile the project you need to have Java SDK 6 or 7 installed in your local system. 
+
+The project consists of two main examples to test the QueryAnswer module and RDB2RDF module. I'm going to show you how to compile both examples respectively. In the project root directory type commands:
+```
+> javac -cp .:lib/* example/queryanswer/QueryAnswerTest.java
+> javac -cp .:lib/* example/rdb2rdf/ExportTest.java
+```
+
+Or in Windows
+```
+> javac -cp .;lib\* example\queryanswer\QueryAnswerTest.java
+> javac -cp .;lib\* example\rdb2rdf\ExportTest.java
+```
+
+**Step 4: Run the tests**
+
+* The first run is to test the QueryAnswer module. The output is the returned number of rows for a given SPARQL query.
+```
+> java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
+```
+Or in Windows
+```
+> java -cp .;jdbc\h2-1.3.174.jar;lib\* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
+```
+
+* The second run is to test the QueryMaterialization module. The output is a RDF file for a given export format.
+```
+> java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
+```
+Or in Windows
+```
+> java -cp .;jdbc\h2-1.3.174.jar;lib\* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
+```
+
+## EMPDB-Lite Database
 
 All examples use `empdb` database that you can [download here](https://github.com/obidea/semantika-api/releases/download/v1.1/h2-semantika_24-02-2014.zip).
 The database is a modified work from the original [Employees DB from MySQL site](http://dev.mysql.com/doc/employee/en/employees-introduction.html). It
