@@ -24,8 +24,8 @@ To compile the project you need to have Java SDK 6 or 7 installed in your local 
 
 The project consists of two main examples to test the QueryAnswer module and RDB2RDF module. I'm going to show you how to compile both examples respectively. In the project root directory type commands:
 ```
-> javac -cp .:lib/* example/queryanswer/QueryAnswerTest.java
-> javac -cp .:lib/* example/rdb2rdf/ExportTest.java
+$ javac -cp .:lib/* example/queryanswer/QueryAnswerTest.java
+$ javac -cp .:lib/* example/rdb2rdf/ExportTest.java
 ```
 
 Or in Windows
@@ -38,7 +38,7 @@ Or in Windows
 
 * The first run is to test the QueryAnswer module. The output is the returned number of rows for a given SPARQL query.
 ```
-> java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
+$ java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
 ```
 Or in Windows
 ```
@@ -47,7 +47,7 @@ Or in Windows
 
 * The second run is to test the QueryMaterialization module. The output is a RDF file for a given export format.
 ```
-> java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
+$ java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
 ```
 Or in Windows
 ```
@@ -66,8 +66,13 @@ contains dummy data about company workers stored in 6 separate tables.
 The `empdb` database is available in H2 engine. To use the database, download the zip and unpack it:
 
 ```
-$ cd path/to/h2-semantika/
+$ cd path/to/h2-semantika
 $ ./h2.sh
+```
+Or in Windows
+```
+> cd path\to\h2-semantika
+> h2.bat
 ```
 
 The database engine will start immediately and a localhost page will appear in your default browser. Connect to the database by using the configuration below.
