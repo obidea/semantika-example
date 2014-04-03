@@ -36,7 +36,7 @@ Or in Windows
 
 **Step 4: Run the tests**
 
-* The first run is to test the QueryAnswer module. The output is the returned number of rows for a given SPARQL query.
+* The first run is to test the QueryAnswer module. The test output shows the returned number of rows for each SPARQL query.
 ```
 $ java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
 ```
@@ -45,7 +45,7 @@ Or in Windows
 > java -cp .;jdbc\h2-1.3.174.jar;lib\* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
 ```
 
-* The second run is to test the RDB2RDF module. The output is a RDF file for a given export format.
+* The second run is to test the RDB2RDF module. The test output gives an RDF file for each export format (i.e., NTriples, Turtle, XML and JSON-LD).
 ```
 $ java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
 ```
