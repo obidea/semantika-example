@@ -4,7 +4,7 @@ The examples above run as JUnit tests. If you are familiar with Eclipse, you can
 
 **Step 1: Prepare the database**
 
-If you haven't done this before [please jump to this page and follow the installation guide](https://github.com/obidea/semantika-api/tree/master/example#example-database). Then return to this section later when you have finished. Make sure the H2 server is running.
+If you haven't done this before [please jump to this page and follow the installation guide](https://github.com/obidea/semantika-api/tree/master/example#empdb-lite-database). Then return to this section later when you have finished. Make sure the H2 server is running.
 
 **Step 2: Get the project**
 
