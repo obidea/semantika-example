@@ -29,7 +29,7 @@ public class ExportTest
       IMaterializerEngine materializer = mAppManager.createMaterializerEngine().useNTriples();
       
       // Specify the output location.
-      File fout = File.createTempFile("output", ".n3", new File("/tmp"));
+      File fout = new File("output.n3"); //$NON-NLS-1$
       
       // Flag the start and end of the export process.
       materializer.start();
@@ -44,7 +44,7 @@ public class ExportTest
       IMaterializerEngine materializer = mAppManager.createMaterializerEngine().useTurtle();
       
       // Specify the output location.
-      File fout = File.createTempFile("output", ".ttl", new File("/tmp"));
+      File fout = new File("output.ttl"); //$NON-NLS-1$
 
       // Flag the start and end of the export process.
       materializer.start();
@@ -59,7 +59,7 @@ public class ExportTest
       IMaterializerEngine materializer = mAppManager.createMaterializerEngine().useRdfXml();
       
       // Specify the output location.
-      File fout = File.createTempFile("output", ".xml", new File("/tmp"));
+      File fout = new File("output.xml"); //$NON-NLS-1$
 
       // Flag the start and end of the export process.
       materializer.start();
@@ -74,7 +74,7 @@ public class ExportTest
       IMaterializerEngine materializer = mAppManager.createMaterializerEngine().useRdfJson();
       
       // Specify the output location.
-      File fout = File.createTempFile("output", ".jsonld", new File("/tmp"));
+      File fout = new File("output.json"); //$NON-NLS-1$
 
       // Flag the start and end of the export process.
       materializer.start();
