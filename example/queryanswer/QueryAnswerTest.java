@@ -110,9 +110,9 @@ public class QueryAnswerTest
             "{ ?x :memberOf ?y .\n" +
             "  ?y :deptName \"Finance\" .\n" +
             "  ?x :firstName ?fname; \n" +
-            "     :lastName ?lname; \n" +
-            "     :hireDate ?hiredate; \n" +
-            "     :salaryAmount ?salary . \n" +
+            "     :lastName ?lname; \n" + //$NON-NLS-1$
+            "     :hireDate ?hiredate; \n" + //$NON-NLS-1$
+            "     :salaryAmount ?salary . \n" + //$NON-NLS-1$
             "  FILTER ( ?hiredate > '1995-01-01' && ?salary > 50000) }"; //$NON-NLS-1$
       
       mQueryEngine.start();
@@ -131,14 +131,14 @@ public class QueryAnswerTest
             "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
             "SELECT ?fname ?lname \n" +
             "WHERE\n" +
-            "{ ?boss :leads ?department .\n" +
-            "  ?staff :memberOf ?department .\n" +
-            "  ?department :deptName \"Sales\" .\n" +
-            "  ?boss :salaryAmount ?bossSalary .\n" +
-            "  ?staff :firstName ?fname; \n" +
-            "         :lastName ?lname; \n" +
-            "         :salaryAmount ?staffSalary . \n" +
-            "  FILTER ( ?staffSalary > ?bossSalary  && ?boss != ?staff ) }"; //$NON-NLS-1$
+            "{ ?x :leads ?d .\n" +
+            "  ?y :memberOf ?d .\n" +
+            "  ?d :deptName \"Sales\" .\n" +
+            "  ?x :salaryAmount ?bossSalary .\n" +
+            "  ?y :firstName ?fname; \n" +
+            "     :lastName ?lname; \n" +
+            "     :salaryAmount ?staffSalary . \n" +
+            "  FILTER ( ?staffSalary > ?bossSalary && ?x != ?y ) }"; //$NON-NLS-1$
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
@@ -168,6 +168,93 @@ public class QueryAnswerTest
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       assertTotalRow(result, 13);
+      mQueryEngine.stop();
+   }
+
+   @Test
+   public void testQuery7() throws Exception
+   {
+      /* 
+       * Query 7: Show all senior employees that have a clear hiring date.
+       */
+      final String sparql = 
+            "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
+            "SELECT ?fname ?lname ?hiredate \n" +
+            "WHERE\n" +
+            "{ ?staff :firstName ?fname; \n" +
+            "         :lastName ?lname; \n" +
+            "         :birthDate ?birthdate . \n" +
+            "  OPTIONAL { ?staff :hireDate ?hiredate }\n" +
+            "  FILTER (BOUND(?hiredate) && ?birthdate < '1952-12-31') }"; //$NON-NLS-1$
+      
+      mQueryEngine.start();
+      IQueryResult result = mQueryEngine.evaluate(sparql);
+      assertTotalRow(result, 2292);
+      mQueryEngine.stop();
+   }
+
+   @Test
+   public void testQuery8() throws Exception
+   {
+      /* 
+       * Query 8: Show all senior employees that have an unclear hiring date (i.e., the data has lost)
+       */
+      final String sparql = 
+            "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
+            "SELECT ?fname ?lname ?hiredate \n" +
+            "WHERE\n" +
+            "{ ?staff :firstName ?fname; \n" +
+            "         :lastName ?lname; \n" +
+            "         :birthDate ?birthdate . \n" +
+            "  OPTIONAL { ?staff :hireDate ?hiredate }\n" +
+            "  FILTER (!BOUND(?hiredate) && ?birthdate < '1952-12-31') }"; //$NON-NLS-1$
+      
+      mQueryEngine.start();
+      IQueryResult result = mQueryEngine.evaluate(sparql);
+      assertTotalRow(result, 1294);
+      mQueryEngine.stop();
+   }
+
+   @Test
+   public void testQuery9() throws Exception
+   {
+      /* 
+       * Query 9: Show all male junior employees that has ending words in their first name "hong".
+       */
+      final String sparql = 
+            "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
+            "SELECT ?fname ?lname ?hiredate \n" +
+            "WHERE\n" +
+            "{ ?staff :firstName ?fname; \n" +
+            "         :lastName ?lname; \n" +
+            "         :gender \"M\"; \n" +
+            "         :hireDate ?hiredate . \n" +
+            "  FILTER (REGEX(?fname, 'hong$', 'i') && ?hiredate >= '1996-01-01') }"; //$NON-NLS-1$
+      
+      mQueryEngine.start();
+      IQueryResult result = mQueryEngine.evaluate(sparql);
+      assertTotalRow(result, 16);
+      mQueryEngine.stop();
+   }
+
+   @Test
+   public void testQuery10() throws Exception
+   {
+      /* 
+       * Query 10: Show employees that got comments in Spanish
+       */
+      final String sparql = 
+            "PREFIX :   <http://obidea.com/ex/ontology/empdb#>\n" +
+            "SELECT ?fname ?lname ?text \n" +
+            "WHERE\n" +
+            "{ ?staff :firstName ?fname; \n" +
+            "         :lastName ?lname; \n" +
+            "         :comment ?text . \n" +
+            "  FILTER ( lang(?text) = 'es' ) }"; //$NON-NLS-1$
+      
+      mQueryEngine.start();
+      IQueryResult result = mQueryEngine.evaluate(sparql);
+      assertTotalRow(result, 1);
       mQueryEngine.stop();
    }
 
