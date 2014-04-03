@@ -48,6 +48,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 5048);
       mQueryEngine.stop();
    }
@@ -71,6 +72,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 19450);
       mQueryEngine.stop();
    }
@@ -92,6 +94,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 1);
       mQueryEngine.stop();
    }
@@ -117,6 +120,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 188);
       mQueryEngine.stop();
    }
@@ -142,6 +146,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 362);
       mQueryEngine.stop();
    }
@@ -167,6 +172,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 13);
       mQueryEngine.stop();
    }
@@ -189,6 +195,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 2292);
       mQueryEngine.stop();
    }
@@ -211,6 +218,7 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 1294);
       mQueryEngine.stop();
    }
@@ -233,8 +241,14 @@ public class QueryAnswerTest
       
       mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
+      printQuery(sparql);
       assertTotalRow(result, 16);
       mQueryEngine.stop();
+   }
+
+   private void printQuery(String sparql)
+   {
+      LOG.info("\n" + sparql); //$NON-NLS-1$
    }
 
    private void assertTotalRow(IQueryResult result, int expectedNumber) throws SQLException
@@ -244,7 +258,7 @@ public class QueryAnswerTest
          counter++;
          LOG.debug(result.getValueList().toString());
       }
-      LOG.info("{} row(s) returned", counter);
+      LOG.info("{} row(s) returned\n", counter);
       assertEquals(expectedNumber, counter);
    }
 }
