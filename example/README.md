@@ -45,7 +45,7 @@ Or in Windows
 > java -cp .;jdbc\h2-1.3.174.jar;lib\* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
 ```
 
-* The second run is to test the QueryMaterialization module. The output is a RDF file for a given export format.
+* The second run is to test the RDB2RDF module. The output is a RDF file for a given export format.
 ```
 $ java -cp .:jdbc/h2-1.3.174.jar:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
 ```
