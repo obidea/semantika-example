@@ -1,9 +1,10 @@
 package example.queryanswer;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.sql.SQLException;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -27,6 +28,13 @@ public class QueryAnswerTest
    {
       ApplicationManager appManager = new ApplicationFactory().configure(CONFIG_FILE).createApplicationManager();
       mQueryEngine = appManager.createQueryEngine();
+      mQueryEngine.start();
+   }
+
+   @AfterClass
+   public static void close() throws Exception
+   {
+      mQueryEngine.stop();
    }
 
    @Test
@@ -46,11 +54,9 @@ public class QueryAnswerTest
             "     :gender ?gender;\n" +
             "     :hireDate ?hiredate . }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 5048);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -70,11 +76,9 @@ public class QueryAnswerTest
             "     :gender ?gender;\n" +
             "     :hireDate ?hiredate . }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 19450);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -92,11 +96,9 @@ public class QueryAnswerTest
             "  ?x :firstName ?fname .\n" +
             "  ?x :lastName ?lname . }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 1);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -118,11 +120,9 @@ public class QueryAnswerTest
             "     :salaryAmount ?salary . \n" + //$NON-NLS-1$
             "  FILTER ( ?hiredate > '1995-01-01' && ?salary > 50000) }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 188);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -144,11 +144,9 @@ public class QueryAnswerTest
             "     :salaryAmount ?staffSalary . \n" +
             "  FILTER ( ?staffSalary > ?bossSalary && ?x != ?y ) }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 362);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -170,11 +168,9 @@ public class QueryAnswerTest
             "  OPTIONAL { ?staff :hireDate ?hiredate }\n" +
             "  FILTER ( ?salary > 120000 && ?birthdate < '1952-12-31' ) }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 13);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -193,11 +189,9 @@ public class QueryAnswerTest
             "  OPTIONAL { ?staff :hireDate ?hiredate }\n" +
             "  FILTER (BOUND(?hiredate) && ?birthdate < '1952-12-31') }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 2292);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -216,11 +210,9 @@ public class QueryAnswerTest
             "  OPTIONAL { ?staff :hireDate ?hiredate }\n" +
             "  FILTER (!BOUND(?hiredate) && ?birthdate < '1952-12-31') }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 1294);
-      mQueryEngine.stop();
    }
 
    @Test
@@ -239,11 +231,9 @@ public class QueryAnswerTest
             "         :hireDate ?hiredate . \n" +
             "  FILTER (REGEX(?fname, 'hong$', 'i') && ?hiredate >= '1996-01-01') }"; //$NON-NLS-1$
       
-      mQueryEngine.start();
       IQueryResult result = mQueryEngine.evaluate(sparql);
       printQuery(sparql);
       assertTotalRow(result, 16);
-      mQueryEngine.stop();
    }
 
    private void printQuery(String sparql)
