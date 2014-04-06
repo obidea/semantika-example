@@ -1,13 +1,13 @@
-Learn the examples: A practical guide to start integrating Semantika Core Framework into your Java
-application right now!
+[Learn the examples](https://github.com/obidea/semantika-api/tree/master/example): A quick start to integrate Semantika into your Java application right now!
 
 Download latest: [Semantika Core 1.2](https://github.com/obidea/semantika-api/releases/download/v1.2/semantika-core-1.2.jar) (Apr 2, 2014)
 
-Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction.
-Need help? Join [OBDA Semantika Forum](https://groups.google.com/forum/#!forum/obda-semantika).
+Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction, or if you need help please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika).
 
-System Setup
+API Overview
 ------------
+
+### System Setup
 
 An instance of ApplicationManager class can be created by loading `configuration.xml` in your classpath
 (See [wiki](https://github.com/obidea/semantika-api/wiki/1.-XML-Configuration-File) for more details on
@@ -18,8 +18,7 @@ ApplicationManager manager = new ApplicationFactory()
              .createApplicationManager();
 ```
 
-Query Answer
-------------
+### Query Answer
 
 To enable query answer in your Java application:
 ```java
@@ -50,8 +49,7 @@ while (pageNum <= maxPage) {
 queryEngine.stop();
 ```
 
-RDB2RDF Export
---------------
+### RDB2RDF Export
 
 To enable RDB2RDF data export in your Java application:
 
@@ -82,9 +80,10 @@ The upcoming 1.3 has several exciting features to come:
 Q & A
 -----
 
-Some of you may have wondered about the missing source code of Semantika. This is true
-because the code is still in my private repository. I decided to keep the code privately
-because there are still many code refactors happening and this situation can be unpleasant
-for those who want to study the code. However, I will remain to my true intention to make
-it open source and it will soon be published. So stay tune!
+Some of you may have wondered about the missing source code of Semantika. That is true
+the source code is not here. The files are still in my private repository and I haven't
+published them yet. I decided to keep the code privately because there are still many
+code refactors and it can be unpleasant for those who want to study the code. However,
+I will remain to my initial purpose to make it open source and will be soon published.
+So stay tune!
 
