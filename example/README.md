@@ -1,5 +1,5 @@
-Run the Examples
-----------------
+Learn the Examples
+------------------
 
 The examples above run as JUnit tests. If you are familiar with Eclipse, you can clone and import this project to Eclipse and run the JUnit tests. However in this tutorial, I'm going to show how to run the examples via the command lines.
 
