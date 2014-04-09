@@ -9,12 +9,12 @@ API Overview
 
 ### System Setup
 
-An instance of ApplicationManager class can be created by loading `configuration.xml` in your classpath
-(See [wiki](https://github.com/obidea/semantika-api/wiki/1.-XML-Configuration-File) for more details on
+An instance of ApplicationManager class can be created by loading `application.cfg.xml` in your classpath
+([Read our wiki](https://github.com/obidea/semantika-api/wiki/1.-XML-Configuration-File) for more details on
 Semantika configuration file).
 ```java
 ApplicationManager manager = new ApplicationFactory()
-             .configure("configuration.xml")
+             .configure("application.cfg.xml")
              .createApplicationManager();
 ```
 
