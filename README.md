@@ -1,6 +1,6 @@
 [Learn the examples](https://github.com/obidea/semantika-api/tree/master/example): A quick start to integrate Semantika into your Java application right now!
 
-Download latest: [Semantika Core 1.2](https://github.com/obidea/semantika-api/releases/download/v1.2/semantika-core-1.2.jar) (Apr 2, 2014)
+Download latest: [Semantika Core 1.3](https://github.com/obidea/semantika-api/releases) (Apr 9, 2014)
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction, or if you need help please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika).
 
@@ -63,19 +63,37 @@ exporter.stop();
 What's Next?
 ------------
 
-The upcoming 1.3 has several exciting features to come:
+The upcoming 1.4 will revisit the SPARQL OPTINAL statement:
 
-* **Connection Pool**. Users will have the option to set a connection pool to handle
-  multiple concurrent requests without experiencing data service bottleneck.
+* **Multiline OPTIONAL**. The Query engine will be able to execute more advanced query using OPTIONAL keyword.
+```
+ SELECT ?x ?propA ?propB ?propC
+ WHERE {
+   ?x :hasPropertyA ?propA
+   OPTIONAL {
+     ?x :hasPropertyB ?propB;
+        :hasPropertyY ?y .  
+     ?y :hasPropertyC ?propC    
+   }
+ }
+```
 
-* **User's Query**. Users will be able to write more complex SQL in the mapping without
-  having the worry the system may rejected it. This feature is highly beneficial for
-  the RDB2RDF feature.
-
-* **Multiple Input Mapping Files**. The configuration file will be able to handle
-  multiple mapping files as input. The purpose is to allow users working in separate
-  mappings and load them collectively during the runtime.
-
+* **Nested OPTIONAL**. The Query engine will be able to execute more advanced query using OPTIONAL keyword.
+```
+ SELECT ?x ?propA ?propB ?propC ?propD ?propE
+ WHERE {
+   ?x :hasPropertyA ?propA
+   OPTIONAL {
+     ?x :hasPropertyB ?propB;
+        :hasPropertyY ?y .  
+     ?y :hasPropertyC ?propC
+     OPTIONAL {
+        ?y :hasPropertyD ?propD;
+           :hasPropertyE ?propE
+     }    
+   }
+ }
+```
 
 Q & A
 -----
