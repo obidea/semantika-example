@@ -8,20 +8,20 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.obidea.semantika.app.ApplicationFactory;
 import com.obidea.semantika.app.ApplicationManager;
 import com.obidea.semantika.queryanswer.IQueryEngine;
 import com.obidea.semantika.queryanswer.result.IQueryResult;
+import com.obidea.semantika.util.LogUtils;
 
 public class QueryAnswerTest
 {
-   private static final String CONFIG_FILE = "example/queryanswer/configuration.xml";
+   private static final String CONFIG_FILE = "example/queryanswer/configuration.xml"; //$NON-NLS-1$
 
    private static IQueryEngine mQueryEngine;
 
-   private static final Logger LOG = LoggerFactory.getLogger("semantika.test"); //$NON-NLS-1$
+   private static final Logger LOG = LogUtils.createLogger("semantika.test"); //$NON-NLS-1$
 
    @BeforeClass
    public static void setUp() throws Exception
