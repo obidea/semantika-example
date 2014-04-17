@@ -17,7 +17,7 @@ import com.obidea.semantika.util.LogUtils;
 
 public class QueryAnswerTest
 {
-   private static final String CONFIG_FILE = "example/queryanswer/configuration.xml"; //$NON-NLS-1$
+   private static final String CONFIG_FILE = "example/queryanswer/application.cfg.xml"; //$NON-NLS-1$
 
    private static IQueryEngine mQueryEngine;
 
