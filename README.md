@@ -1,6 +1,6 @@
 [Learn the examples](https://github.com/obidea/semantika-api/tree/master/example): A quick start to integrate Semantika into your Java application right now!
 
-Download latest: [Semantika Core 1.4](https://github.com/obidea/semantika-api/releases/download/v1.4/semantika-distribution-1.4.zip) (Apr 17, 2014)
+Download latest: [Semantika Core 1.4](https://github.com/obidea/semantika-api/releases) (Apr 17, 2014)
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction, or if you need help please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika).
 
