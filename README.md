@@ -1,6 +1,6 @@
 [Learn the examples](https://github.com/obidea/semantika-api/tree/master/example): A quick start to integrate Semantika into your Java application right now!
 
-Download latest: [Semantika Core 1.3](https://github.com/obidea/semantika-api/releases) (Apr 9, 2014)
+Download latest: [Semantika Core 1.4](https://github.com/obidea/semantika-api/releases/download/v1.4/semantika-distribution-1.4.zip) (Apr 17, 2014)
 
 Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction, or if you need help please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika).
 
@@ -63,35 +63,19 @@ exporter.stop();
 What's Next?
 ------------
 
-The upcoming 1.4 will revisit the SPARQL OPTINAL statement:
-
-* **Multiline OPTIONAL**. The Query engine will be able to execute more advanced query using OPTIONAL keyword.
+The upcoming 1.5 will will implement SPARQL CONSTRUCT statement. This feature is very useful
+for data transformation between distinct vocabularies. The example below shows how to transform
+FOAF data to VCard data using CONSTRUCT query.
 ```
- SELECT ?x ?propA ?propB ?propC
- WHERE {
-   ?x :hasPropertyA ?propA
-   OPTIONAL {
-     ?x :hasPropertyB ?propB;
-        :hasPropertyY ?y .  
-     ?y :hasPropertyC ?propC    
-   }
+ CONSTRUCT { 
+   ?X vCard:FN ?name .
+   ?X vCard:URL ?url .
+   ?X vCard:TITLE ?title .
  }
-```
-
-* **Nested OPTIONAL**. The Query engine will be able to execute more advanced query using OPTIONAL keyword.
-```
- SELECT ?x ?propA ?propB ?propC ?propD ?propE
- WHERE {
-   ?x :hasPropertyA ?propA
-   OPTIONAL {
-     ?x :hasPropertyB ?propB;
-        :hasPropertyY ?y .  
-     ?y :hasPropertyC ?propC
-     OPTIONAL {
-        ?y :hasPropertyD ?propD;
-           :hasPropertyE ?propE
-     }    
-   }
+ WHERE { 
+   OPTIONAL { ?X foaf:name ?name . }
+   OPTIONAL { ?X foaf:homepage ?url . }
+   OPTIONAL { ?X foaf:title ?title . }
  }
 ```
 
