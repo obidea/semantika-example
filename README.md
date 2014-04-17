@@ -40,7 +40,9 @@ int limit = 100;
 int maxPage = 10;
 int pageNum = 1;
 while (pageNum <= maxPage) {
-   IQueryResult result = queryEngine.createQuery(sparql).setFirstResult(offset).setMaxResults(limit).evaluate();
+   IQueryResult result = queryEngine.createQuery(sparql)
+                                    .setFirstResult(offset)
+                                    .setMaxResults(limit).evaluate();
    // do something with the result
    // ...
    offset += limit;
