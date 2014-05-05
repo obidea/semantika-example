@@ -81,13 +81,3 @@ FOAF data to VCard data using CONSTRUCT query.
  }
 ```
 
-Q & A
------
-
-Some of you may have wondered about the missing source code of Semantika. That is true
-the source code is not here. The files are still in my private repository and I haven't
-published them yet. I decided to keep the code privately because there are still many
-code refactors and it can be unpleasant for those who want to study the code. However,
-I will remain to my initial purpose to make it open source and will be soon published.
-So stay tune!
-
