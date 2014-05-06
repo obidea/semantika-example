@@ -65,19 +65,5 @@ exporter.stop();
 What's Next?
 ------------
 
-The upcoming 1.5 will will implement SPARQL CONSTRUCT statement. This feature is very useful
-for data transformation between distinct vocabularies. The example below shows how to transform
-FOAF data to VCard data using CONSTRUCT query.
-```
- CONSTRUCT { 
-   ?X vCard:FN ?name .
-   ?X vCard:URL ?url .
-   ?X vCard:TITLE ?title .
- }
- WHERE { 
-   OPTIONAL { ?X foaf:name ?name . }
-   OPTIONAL { ?X foaf:homepage ?url . }
-   OPTIONAL { ?X foaf:title ?title . }
- }
-```
+--
 
