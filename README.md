@@ -3,7 +3,7 @@ Learn the Example
 
 ### Step 1: Download Semantika
 
-Please download the latest distribution package and unpack it into your local directory.
+[Please download the latest distribution package](https://github.com/obidea/semantika-api/releases) and unpack it into your local directory.
 
 ```
 $ unzip semantika-dist-<version>.zip
