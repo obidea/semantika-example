@@ -53,6 +53,20 @@ $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.queryanswer.Query
 $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
 ```
 
+Troubleshooting
+---------------
+
+* Ignore these warning lines when runnning the examples. These messages come from R2RML parser and have no harm to the overall system.
+
+```
+Could not find DatatypeHandler : org.openrdf.rio.datatypes.xmlschema
+Could not find DatatypeHandler : org.openrdf.rio.datatypes.rdf
+Could not find DatatypeHandler : org.openrdf.rio.datatypes.dbpedia
+Could not find DatatypeHandler : org.openrdf.rio.datatypes.virtuosogeometry
+Could not find DatatypeHandler : org.openrdf.rio.datatypes.geosparql
+Could not find LanguageHandler : org.openrdf.rio.languages.RFC3066
+```
+
 Need Help?
 ----------
 Please go through [our user guide](https://github.com/obidea/semantika-api/wiki) to understand better the system, or if you have questions, please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika) and we are ready to help.
