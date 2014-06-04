@@ -56,7 +56,7 @@ $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTes
 Troubleshooting
 ---------------
 
-* Ignore these warning lines when runnning the examples. These messages come from R2RML parser and have no harm to the overall system.
+* Ignore these warning lines when runnning the examples. These messages come from the [R2RML parser](https://github.com/johardi/jr2rml-parser) and have no harm to the overall system.
 
 ```
 Could not find DatatypeHandler : org.openrdf.rio.datatypes.xmlschema
