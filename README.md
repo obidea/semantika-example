@@ -1,7 +1,3 @@
-Download latest: [Semantika Core 1.4](https://github.com/obidea/semantika-api/releases) (Apr 17, 2014)
-
-Check [our Wikipage](https://github.com/obidea/semantika-api/wiki) for a brief introduction, or if you need help please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika).
-
 Learn the Example
 -----------------
 
@@ -42,6 +38,8 @@ $ javac -cp .:*:lib/* example/queryanswer/QueryAnswerTest.java
 $ javac -cp .:*:lib/* example/rdb2rdf/ExportTest.java
 ```
 
+**Note**: Replace colon `:` with semi-colon `;` for Windows system.
+
 ### Step 5: Run the examples
 
 * The first example is to test the "SPARQL Query Answer" feature. We have prepared some SPARQL tests inside the example file about employees profile (e.g., names, salary, department, etc.). The result of the test will display the SPARQL query along with the total number of returned data.
@@ -54,3 +52,7 @@ $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.queryanswer.Query
 ```
 $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
 ```
+
+Need Help?
+----------
+Please go through [our user guide](https://github.com/obidea/semantika-api/wiki) to understand better the system, or if you have questions, please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika) and we are ready to help.
