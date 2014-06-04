@@ -58,7 +58,7 @@ $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTes
 What Next?
 ----------
 
-The examples above have given you a demonstration about how Semantika can seamlessly connect to a relational database and answers SPARQL queries based on the semantic mapping model provided by users. Semantika will also incorporate powerful reasoning in the presence of a domain model (i.e., an OWL ontology).
+The examples above have given you a demonstration of how Semantika can seamlessly connect to a relational database and answers SPARQL queries based on the semantic mapping model provided by users. Semantika will also incorporate a powerful reasoning in the presence of a domain model (i.e., an OWL ontology).
 
 1. To know better the system, you need to understand the concept of semantic mapping model. It's simple BTW. The mappings are just a specification about how your data (in database) has a certain meaning (in domain model).
    * Do it pragmatically. Go inside the `model/` folder and learn the [bsbm.mod.ttl](https://github.com/obidea/semantika-api/blob/master/model/empdb.mod.ttl) file (or alternatively [bsbm.mod.xml](https://github.com/obidea/semantika-api/blob/master/model/empdb.mod.xml)).
