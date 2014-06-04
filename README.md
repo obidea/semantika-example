@@ -15,7 +15,9 @@ $ unzip semantika-dist-<version>.zip
 
 ### Step 3: Get the examples
 
-We are going to use commands in [Git](http://git-scm.com/downloads) so make sure your system has Git already installed. To download the examples, we are *not* going to use `git clone` but instead we are going to use `git fetch` and add the examples immediately into Semantika distribution folder. The commands below have been tested using Git 1.8.x
+We are going to use commands in [Git](http://git-scm.com/downloads) so make sure your system has Git already installed. To download the examples, we are *not* going to use `git clone` but instead we are going to use `git fetch` and add the examples immediately into Semantika distribution folder.
+
+The commands below have been tested using Git 1.8.x:
 
 ```
 $ cd semantika-dist-<version>
@@ -25,7 +27,7 @@ $ git fetch origin master
 $ git reset --hard FETCH_HEAD
 ```
 
-Now if you do `ls` (or `dir` in Windows), you will see the example folder and other extra files from this repository.
+Now if you do `ls` (or `dir` in Windows), you will see the `example/` folder and other extra files from this repository.
 
 ### Step 4: Compile the examples
 
