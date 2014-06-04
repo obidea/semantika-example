@@ -5,7 +5,7 @@ The examples above run as JUnit tests. If you are familiar with Eclipse, you can
 
 ### Step 1: Prepare the database
 
-If you haven't done this before [please jump to this page and follow the installation guide](https://github.com/obidea/semantika-api/tree/master/example#empdb-lite-database). Then return to this section later when you have finished. Make sure the H2 server is running.
+[Please jump to this page and follow the installation guide to prepare the example database](https://github.com/obidea/semantika-api/tree/master/example#empdb-lite-database). Return to this page again when you have finished the installation and make sure the H2 server is running.
 
 ### Step 2: Get the project
 
@@ -21,7 +21,7 @@ git clone https://github.com/obidea/semantika-api.git
 
 ### Step 3: Compile the tests
 
-To compile the project you need to have Java SDK 6 or 7 installed in your local system. 
+To compile the project you need to have Java SDK 7 installed in your local system. 
 
 The project consists of two main examples to test the QueryAnswer module and RDB2RDF module. I'm going to show you how to compile both examples respectively. In the project root directory type commands:
 ```
