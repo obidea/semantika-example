@@ -21,7 +21,7 @@ git clone https://github.com/obidea/semantika-api.git
 
 ### Step 3: Compile the tests
 
-To compile the project you need to have Java SDK 7 installed in your local system. 
+To compile the project you need to have [Java SDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) installed in your local system. 
 
 The project consists of two main examples to test the QueryAnswer module and RDB2RDF module. I'm going to show you how to compile both examples respectively. In the project root directory type commands:
 ```
