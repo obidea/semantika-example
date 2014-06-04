@@ -1,0 +1,124 @@
+@prefix : <http://obidea.com/ex/ontology/empdb#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+
+<TriplesMap1>
+   rr:logicalTable [ rr:tableName "DEPARTMENTS" ];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/department/{DEPT_NO}";
+      rr:class :Department
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :deptName;
+      rr:objectMap [ rr:column "DEPT_NAME" ]
+   ].
+
+<TriplesMap2>
+   rr:logicalTable [ rr:tableName "DEPT_EMP" ];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}"
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :memberOf;
+      rr:objectMap [ rr:template "http://obidea.com/empdb/department/{DEPT_NO}" ]
+   ].
+
+<TriplesMap3>
+   rr:logicalTable [ rr:tableName "DEPT_MANAGER" ];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+      rr:class :Manager
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :leads;
+      rr:objectMap [ rr:template "http://obidea.com/empdb/department/{DEPT_NO}" ]
+   ].
+
+<TriplesMap4>
+   rr:logicalTable [ rr:tableName "EMPLOYEES" ];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :birthDate;
+      rr:objectMap [ rr:column "BIRTH_DATE" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :firstName;
+      rr:objectMap [ rr:column "FIRST_NAME" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :lastName;
+      rr:objectMap [ rr:column "LAST_NAME" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :gender;
+      rr:objectMap [ rr:column "GENDER" ]
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :hireDate;
+      rr:objectMap [ rr:column "HIRE_DATE" ]
+   ].
+
+<TriplesMap5>
+   rr:logicalTable [ rr:tableName "SALARIES" ];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+   ];
+   rr:predicateObjectMap [
+      rr:predicate :salaryAmount;
+      rr:objectMap [ rr:column "SALARY" ]
+   ].
+
+<TriplesMap6>
+   rr:logicalTable [ rr:sqlQuery """
+      SELECT EMP_NO FROM TITLES WHERE TITLE='Staff'
+      """];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+      rr:class :Staff
+   ].
+
+<TriplesMap7>
+   rr:logicalTable [ rr:sqlQuery """
+      SELECT EMP_NO FROM TITLES WHERE TITLE='Senior Staff'
+      """];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+      rr:class :SeniorStaff
+   ].
+
+<TriplesMap8>
+   rr:logicalTable [ rr:sqlQuery """
+      SELECT EMP_NO FROM TITLES WHERE TITLE='Technique Leader'
+      """];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+      rr:class :TechLeader
+   ].
+
+<TriplesMap9>
+   rr:logicalTable [ rr:sqlQuery """
+      SELECT EMP_NO FROM TITLES WHERE TITLE='Assistant Engineer'
+      """];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+      rr:class :AssistantEngineer
+   ].
+
+<TriplesMap10>
+   rr:logicalTable [ rr:sqlQuery """
+      SELECT EMP_NO FROM TITLES WHERE TITLE='Engineer'
+      """];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+      rr:class :Engineer
+   ].
+
+<TriplesMap11>
+   rr:logicalTable [ rr:sqlQuery """
+      SELECT EMP_NO FROM TITLES WHERE TITLE='Senior Engineer'
+      """];
+   rr:subjectMap [
+      rr:template "http://obidea.com/empdb/employee/{EMP_NO}";
+      rr:class :SeniorEngineer
+   ].

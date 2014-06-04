@@ -12,6 +12,13 @@
          <property name="connection.password"></property>
       </data-source>
       <ontology-source resource="model/empdb.owl" />
+      
+      <!-- Mapping model written in TERMAL/XML syntax
       <mapping-source resource="model/empdb.tml.xml" />
+       -->
+       
+       <!-- Mapping model written in R2RML syntax -->
+      <mapping-source resource="model/empdb.mod.ttl" />
+      
    </application-factory>
 </semantika-configuration>

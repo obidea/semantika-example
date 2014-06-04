@@ -11,6 +11,13 @@
          <property name="connection.username">sa</property>
          <property name="connection.password"></property>
       </data-source>
+      
+      <!-- Mapping model written in TERMAL/XML syntax
       <mapping-source resource="model/empdb.tml.xml" strict-parsing="false" />
+      -->
+      
+      <!-- Mapping model written in R2RML syntax -->
+      <mapping-source resource="model/empdb.mod.ttl" strict-parsing="false" />
+      
    </application-factory>
 </semantika-configuration>
