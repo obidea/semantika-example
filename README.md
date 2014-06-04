@@ -56,15 +56,15 @@ $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTes
 What Next?
 ----------
 
-The examples above has demonstrated to you how Semantika can seamlessly connect to a relational database and answer SPARQL queries based on the semantic mapping provided by users. Additionally, Semantika also incorporates powerful reasoning in the presence of a domain model (i.e., an OWL ontology).
+The examples above have given a demonstration about how Semantika can seamlessly connect to a relational database and answers SPARQL queries based on the semantic mapping model provided by users. Semantika will also incorporate powerful reasoning in the presence of a domain model (i.e., an OWL ontology).
 
-1. To know better the system, you need to understand the concept of semantic mappings. It's simple BTW. The mappings are just a specification about how your data (in database) has a certain meaning (in domain model).
+1. To know better the system, you need to understand the concept of semantic mapping model. It's simple BTW. The mappings are just a specification about how your data (in database) has a certain meaning (in domain model).
    * Do it pragmatically. Go inside the `model/` folder and learn the [bsbm.mod.ttl](https://github.com/obidea/semantika-api/blob/master/model/empdb.mod.ttl) file (or alternatively [bsbm.mod.xml](https://github.com/obidea/semantika-api/blob/master/model/empdb.mod.xml)).
-   * Read some resources. Semantika provides two options when writing the mapping model. First, [use R2RML](http://www.w3.org/TR/r2rml/) and second, use [TERMAL/XML](https://github.com/obidea/semantika-api/wiki/2.-Basic-RDB-RDF-Mapping). Click on the links! Once you have mastered one of them, the other is piece of cake. *Well, they both are similar* :)
+   * Read some resources. Semantika provides two options when writing the mapping model. First, [use R2RML](http://www.w3.org/TR/r2rml/) and second, use [TERMAL/XML](https://github.com/obidea/semantika-api/wiki/2.-Basic-RDB-RDF-Mapping). Click on the links! Once you have mastered one of them, the other is piece of cake. *Well, they both are similar!* :)
 
-2. Once you get the mapping model, the rest is easy.
-   * Configuration file. The configuration file is the place where you put everything altogether (i.e., connection settings, domain model resources and mapping model resources). [Look here](https://github.com/obidea/semantika-api/blob/master/example/queryanswer/application.cfg.xml)
-   * Java code. Here is the interesting part where you start building your semantic application using Semantika. [Again look here](https://github.com/obidea/semantika-api/blob/master/example/queryanswer/QueryAnswerTest.java).
+2. Once you get the mapping model, the rest is easy!
+   * Configuration file. The configuration file is the place where you put everything altogether (i.e., connection settings, domain model resources and mapping model resources). [Look here!](https://github.com/obidea/semantika-api/blob/master/example/queryanswer/application.cfg.xml)
+   * Java code. This is the interesting part where you can start building your semantic application using Semantika. [Again, take a look here!](https://github.com/obidea/semantika-api/blob/master/example/queryanswer/QueryAnswerTest.java).
 
 Troubleshooting
 ---------------
