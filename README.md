@@ -88,4 +88,4 @@ Could not find LanguageHandler : org.openrdf.rio.languages.RFC3066
 
 Need Help?
 ----------
-Please go through [our user guide](https://github.com/obidea/semantika-api/wiki) to understand better the system, or if you have questions, please join the [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika) and we are ready to help.
+Please go through [our user guide](https://github.com/obidea/semantika-api/wiki) to read some specification details about the system, or if you have any questions, please post them to [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika) and we are ready to give you a hand.
