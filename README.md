@@ -15,7 +15,9 @@ If you haven't done this before, [please follow the sample database installation
 
 ### Step 3: Get the examples
 
-To get the example code, we are going to use some commands in [Git](http://git-scm.com/downloads) so make sure your system has Git already installed. Now to do that we are going to do something different. We are *not* going to use `git clone` and getting the whole branches in this repository. But instead we are going to use `git fetch` to get *only* the example files and append them into Semantika distribution folder.
+To get the example code, we are going to use some commands in [Git](http://git-scm.com/downloads) so make sure your system has Git already installed.
+
+Now we are going to do something different. We are *not* going to use `git clone` as usual and getting the whole branches of this repository. But instead we are going to use `git fetch` to get *only* the example code and append the files immediately into Semantika distribution folder.
 
 The commands below have been tested using Git 1.8.x:
 
@@ -27,13 +29,13 @@ $ git fetch origin master
 $ git reset --hard FETCH_HEAD
 ```
 
-Now if you do `ls` (or `dir` in Windows), you will see the `example/` folder and other extra files to run the code. You  still can do `git pull` to update any changes in the example code.
+Now if you type `ls` (or `dir` in Windows), you will see the `example/` folder and other extra files have been added properly. You still can use command `git pull` to update any future changes in the example code.
 
 ### Step 4: Compile the examples
 
 To compile the examples you will need [Java SDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) in your local system. 
 
-The `example/` folder contains two main examples for testing "SPARQL Query Answer" and "RDB2RDF Data Export" feature. In the root folder, type (or paste) each *javac* command.
+The `example/` folder contains two main test cases for testing "SPARQL Query Answer" and "RDB2RDF Data Export" feature. Use the commands below to start compiling the source code.
 
 ```
 $ javac -cp .:*:lib/* example/queryanswer/QueryAnswerTest.java
@@ -44,13 +46,13 @@ $ javac -cp .:*:lib/* example/rdb2rdf/ExportTest.java
 
 ### Step 5: Run the examples
 
-* The first example is to test "SPARQL Query Answer" feature. We have prepared some SPARQL queries about employee's profile (e.g., name, salary, department, etc.). The output of the test will display the total number of returned data and the associated SPARQL query.
+The first example is to test "SPARQL Query Answer" feature. We have prepared some SPARQL queries about employee's profile (e.g., name, salary, department, etc.). The test will display the total number of returned data and the associated SPARQL query.
 
 ```
 $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.queryanswer.QueryAnswerTest
 ```
 
-* The second example is to test "RDB2RDF Data Export" feature. The output of the test is four RDF files in different export format (i.e., NTriples, Turtle, XML and JSON-LD).
+The second example is to test "RDB2RDF Data Export" feature. The test will produce four RDF files in different export format (i.e., NTriples, Turtle, XML and JSON-LD).
 ```
 $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.rdb2rdf.ExportTest
 ```
