@@ -86,6 +86,11 @@ Could not find DatatypeHandler : org.openrdf.rio.datatypes.geosparql
 Could not find LanguageHandler : org.openrdf.rio.languages.RFC3066
 ```
 
+Looking for the Source Code?
+----------------------------
+
+[The source code is distributed under Apache License 2.0 and it is available here.](https://github.com/obidea/semantika-core)
+
 Need Help?
 ----------
 Please go through [our user guide](https://github.com/obidea/semantika-api/wiki) to read some specification details about the system, or if you have any questions, please post them to [OBDA Semantika discussion group](https://groups.google.com/forum/#!forum/obda-semantika) and we are ready to give you a hand.
