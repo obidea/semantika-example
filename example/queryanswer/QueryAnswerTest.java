@@ -246,7 +246,7 @@ public class QueryAnswerTest
       int counter = 0;
       while (result.next()) {
          counter++;
-         LOG.debug(result.getValueList().toString());
+         LOG.debug(result.getValueArray().toString());
       }
       LOG.info("{} row(s) returned\n", counter);
       assertEquals(expectedNumber, counter);
