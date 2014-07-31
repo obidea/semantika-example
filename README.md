@@ -3,7 +3,7 @@ OBDA Semantika API
 
 This repository presents a working example for developing Semantika application. The demonstration uses JUnit test framework to run the program.
 
-Latest release: [1.7 is available!](https://github.com/obidea/semantika-api/releases/tag/v1.7) (July 8, 2014)
+Latest release: [1.7.1 is available!](https://github.com/obidea/semantika-api/releases/tag/v1.7.1) (July 31, 2014)
 
 Learn the Example
 -----------------
