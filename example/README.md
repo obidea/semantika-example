@@ -1,7 +1,7 @@
 EMPDB-Lite Database
 -------------------
 
-All examples use `empdb` database that you can [download here](https://github.com/obidea/semantika-api/releases/download/v1.1/h2-semantika_24-02-2014.zip).
+All examples use `empdb` database that you can [download here](https://github.com/obidea/semantika/blob/gh-pages/demo/empdb-data.zip?raw=true).
 The database is a modified work from the original Employees DB from MySQL site ([link](http://dev.mysql.com/doc/employee/en/employees-introduction.html)). It
 contains dummy data about company workers stored in 6 separate tables.
 
