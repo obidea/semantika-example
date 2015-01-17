@@ -2,7 +2,7 @@ EMPDB-Lite Database
 -------------------
 
 All examples use `empdb` database that you can [download here](https://github.com/obidea/semantika-api/releases/download/v1.1/h2-semantika_24-02-2014.zip).
-The database is a modified work from the original [Employees DB from MySQL site](http://dev.mysql.com/doc/employee/en/employees-introduction.html). It
+The database is a modified work from the original Employees DB from MySQL site ([link](http://dev.mysql.com/doc/employee/en/employees-introduction.html)). It
 contains dummy data about company workers stored in 6 separate tables.
 
 
@@ -10,12 +10,12 @@ contains dummy data about company workers stored in 6 separate tables.
 
 The `empdb` database is available in H2 engine. To run the database:
 ```
-$ cd path/to/h2-semantika
+$ cd path/to/empdb-data
 $ ./h2.sh
 ```
 Or in Windows
 ```
-> cd path\to\h2-semantika
+> cd path\to\empdb-data
 > h2.bat
 ```
 
@@ -23,7 +23,7 @@ The database engine will start immediately and a localhost page will appear in y
 
 ```
 Driver class: org.h2.Driver
-JDBC URL: jdbc:h2:tcp://localhost/empdb
+JDBC URL: jdbc:h2:tcp://localhost/data/empdb
 User Name: sa
 Password: (blank)
 ```
@@ -37,6 +37,8 @@ The following diagram provides an overview of the structure of the `empdb` datab
 
 
 ### Change Log
+
+* **17-01-2015**: Update the H2 engine to version 1.4.185 (2015-01-16).
 
 * **24-02-2014**: Update column with `NULL` value with command as follows (1294 rows were affected).
   ```
