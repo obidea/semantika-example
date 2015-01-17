@@ -16,17 +16,11 @@ Learn the Example
 $ unzip semantika-dist-<version>.zip
 ```
 
-### Step 2: Prepare the database
+### Step 2: Get the Example source code
 
-If you haven't done this before, [please follow the sample database installation guide here](https://github.com/obidea/semantika-api/tree/master/example#empdb-lite-database) and return to this page again after you have completed the installation. Make sure the H2 server is running.
+We are going to use some Git commands to get the example source code. Don't worry if you are not familiar with Git, just make sure your computer [has it installed](http://git-scm.com/downloads).
 
-### Step 3: Get the examples
-
-To get the example code, we are going to use some commands in [Git](http://git-scm.com/downloads) so make sure your system has Git already installed.
-
-Now we are going to do something different. We are *not* going to use `git clone` as usual and getting the whole branches of this repository. But instead we are going to use `git fetch` to get *only* the example code and append the files immediately into Semantika distribution folder.
-
-The commands below have been tested using Git 1.8.x:
+Follow the commands below to add the example code files into the Semantika distribution folder. We have tested using Git 1.8.x:
 
 ```
 $ cd semantika-dist-<version>
@@ -36,20 +30,29 @@ $ git fetch origin master
 $ git reset --hard FETCH_HEAD
 ```
 
-Now if you type `ls` (or `dir` in Windows), you will see the `example/` folder and other extra files have been added properly. You still can use command `git pull` to update any future changes in the example code.
+Note that when you list the directory content, you should see the `example/` folder and other extra files.
 
-### Step 4: Compile the examples
+### Step 3: Compile the source code
 
-To compile the examples you will need [Java SDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) in your local system. 
+Make sure you have the [Java SDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) in your local system.
 
-The `example/` folder contains two main test cases for testing "SPARQL Query Answer" and "RDB2RDF Data Export" feature. Use the commands below to start compiling the source code.
+```
+$ javac -version
+javac 1.7.0_45
+```
+
+The `example/` folder contains two main test cases for testing "SPARQL Query Answer" and "RDB2RDF Data Export". Compile both source code using the commands below:
 
 ```
 $ javac -cp .:*:lib/* example/queryanswer/QueryAnswerTest.java
 $ javac -cp .:*:lib/* example/rdb2rdf/ExportTest.java
 ```
 
-**Note**: Replace colon `:` with semi-colon `;` for Windows system.
+(Replace colon `:` with semi-colon `;` for Windows system)
+
+### Step 4: Setup the database
+
+[Please jump to the database installation guide](https://github.com/obidea/semantika-api/tree/master/example#empdb-lite-database) and don't forget to return to this page again when you have done with the installation. Make sure the H2 database is running properly!
 
 ### Step 5: Run the examples
 
@@ -69,15 +72,11 @@ What Next?
 
 The examples above have demonstrated how Semantika can seamlessly connect to a relational database and answers SPARQL queries based on the semantic mapping model provided by users. In addition, Semantika will include a reasoning step if a domain model (i.e., an OWL ontology) is presented.
 
-**Be pragmatic!**
+**Learning highlights**
 
-To know better the system, you need to understand the concept of semantic mapping model. It's simple BTW. The mappings are just a specification about how your data (in database) has a certain meaning in your domain application.
-* Go inside the `model/` folder and take a look at the [bsbm.mod.ttl](https://github.com/obidea/semantika-api/blob/master/model/empdb.mod.ttl) file (or alternatively [bsbm.mod.xml](https://github.com/obidea/semantika-api/blob/master/model/empdb.mod.xml)).
-* Read some resources about [R2RML](http://www.w3.org/TR/r2rml/) or [TERMAL/XML](https://github.com/obidea/semantika-api/wiki/2.-Basic-RDB-RDF-Mapping). Once you have mastered one of them, the other is just easy as pie. *Well, they both are similar!* :)
-
-Once you passed the mapping model, the rest is easy!
-* Configuration file. The configuration file is the place where you set everything altogether (i.e., connection settings, domain model resources and mapping model resources). [See example](https://github.com/obidea/semantika-api/blob/master/example/queryanswer/application.cfg.xml).
-* Java code. This is the part where you add some few lines of Semantika code for your semantic application. [See example](https://github.com/obidea/semantika-api/blob/master/example/queryanswer/QueryAnswerTest.java).
+1. The mapping model. Take a look inside the `model/` folder and open the files inside. Find out more about the syntax [here](https://github.com/obidea/semantika-api/wiki/2.-Basic-RDB-RDF-Mapping) and [here](http://www.w3.org/TR/r2rml/).
+2. The `application.cfg.xml` file. The configuration file is the place where you glue everything together (i.e., connection settings, domain model resources and mapping model resources). Find out the parameters [here](https://github.com/obidea/semantika-api/wiki/1.-Semantika-Configuration).
+3. The Java code. This is your application code! Check the `example/` folder to study the source code.
 
 Troubleshooting
 ---------------
