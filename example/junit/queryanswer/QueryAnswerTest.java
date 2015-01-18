@@ -1,4 +1,4 @@
-package example.queryanswer;
+package example.junit.queryanswer;
 
 import static org.junit.Assert.assertEquals;
 

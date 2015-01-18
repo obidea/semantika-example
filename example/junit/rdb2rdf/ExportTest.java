@@ -1,4 +1,4 @@
-package example.rdb2rdf;
+package example.junit.rdb2rdf;
 
 import java.io.File;
 
