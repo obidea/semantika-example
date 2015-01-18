@@ -1,22 +1,16 @@
 EMPDB-Lite Database
 -------------------
 
-All examples use `empdb` database that you can [download here](https://github.com/obidea/semantika/blob/gh-pages/demo/empdb-data.zip?raw=true).
-The database is a modified work from the original Employees DB from MySQL site ([link](http://dev.mysql.com/doc/employee/en/employees-introduction.html)). It
-contains dummy data about company workers stored in 6 separate tables.
-
+This is the sample database used to run all the example code. This database is a modified work from the original Employees DB from
+MySQL site ([link](http://dev.mysql.com/doc/employee/en/employees-introduction.html)). It contains dummy data about company workers
+stored in 6 tables.
 
 ### Installation
 
 The `empdb` database is available in H2 engine. To run the database:
 ```
-$ cd path/to/empdb-data
+$ cd path/to/empdb
 $ ./h2.sh
-```
-Or in Windows
-```
-> cd path\to\empdb-data
-> h2.bat
 ```
 
 The database engine will start immediately and a localhost page will appear in your default browser. Connect to the database by using the configuration below.
@@ -28,12 +22,11 @@ User Name: sa
 Password: (blank)
 ```
 
-
 ### Database Structure
 
 The following diagram provides an overview of the structure of the `empdb` database.
 
-![](https://raw.github.com/obidea/semantika-api/master/model/empdb.erd.png)
+![](https://raw.github.com/obidea/semantika-example/master/empdb/empdb.erd.png)
 
 
 ### Change Log
