@@ -61,19 +61,6 @@ These examples demonstrate how Semantika can seamlessly connect to a relational 
 2. The `application.cfg.xml` file. The configuration file is the place where you glue everything together (i.e., connection settings, domain model resources and mapping model resources). Find out the parameters [here](https://github.com/obidea/semantika-core/wiki/1.-Semantika-Configuration).
 3. The Java code. This is your application code! Check the `example/` folder and study the source code.
 
-Troubleshooting
----------------
-
-* Ignore these warning lines when runnning the examples. These messages come from the [R2RML parser](https://github.com/johardi/jr2rml-parser) and have no harm to the overall system.
-
-```
-Could not find DatatypeHandler : org.openrdf.rio.datatypes.xmlschema
-Could not find DatatypeHandler : org.openrdf.rio.datatypes.rdf
-Could not find DatatypeHandler : org.openrdf.rio.datatypes.dbpedia
-Could not find DatatypeHandler : org.openrdf.rio.datatypes.virtuosogeometry
-Could not find DatatypeHandler : org.openrdf.rio.datatypes.geosparql
-Could not find LanguageHandler : org.openrdf.rio.languages.RFC3066
-```
 
 Looking for the Source Code?
 ----------------------------
