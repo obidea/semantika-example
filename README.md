@@ -6,7 +6,7 @@ This repository contains some working examples to help programming with Semantik
 Installation
 ------------
 
-### Step 1: Download Semantika
+#### Step 1: Download Semantika
 
 [Download the latest distribution package](https://github.com/obidea/semantika-core/releases) and unpack it into your local directory.
 
@@ -14,7 +14,7 @@ Installation
 $ unzip semantika-dist-<version>.zip
 ```
 
-### Step 2: Download the source code
+#### Step 2: Download the source code
 
 We're going to use some Git commands to get the example source code. Don't worry if you are not familiar with Git, just make sure your computer [has it installed](http://git-scm.com/downloads).
 
@@ -28,7 +28,7 @@ $ git fetch origin master
 $ git reset --hard FETCH_HEAD
 ```
 
-### Step 3: Run the sample database
+#### Step 3: Run the sample database
 
 Check in the Semantika directory a folder named `empdb/`. This folder contains a sample Employee data in H2 database. To run the database:
 
@@ -40,15 +40,15 @@ $ ./h2.sh
 Code Examples
 -------------
 
-### Query Answering
+#### Query Answering
 
 [Source code for query answering](https://github.com/obidea/semantika-example/blob/master/example/junit/queryanswer/QueryAnswerTest.java) shows you how we setup the `ApplicationManager` and then getting the `QueryEngine` to start the SPARQL query answering service. It contains 9 sample queries to show you what are the SPARQL features that are currently supported by Semantika.
 
-### RDB2RDF Export
+#### RDB2RDF Export
 
 [Source code for RDB2RDF export](https://github.com/obidea/semantika-example/blob/master/example/junit/rdb2rdf/ExportTest.java) shows you how we setup the `ApplicationManager` and then getting the `MaterializerEngine` to start data export service. The code gives you 4 format flavours: NTriples, Turtle, RDF/XML and RDF/JSON.
 
-### Progammatic Configuration
+#### Progammatic Configuration
 
 [Source code EmployeeApp](https://github.com/obidea/semantika-example/blob/master/example/demo/EmployeeApp.java) shows you how to setup the `ApplicationManager` using programmatic configuration. This is a simple query answer application where you can type freely any SPARQL query to be evaluated against the underlying database.
 
@@ -78,7 +78,7 @@ Could not find LanguageHandler : org.openrdf.rio.languages.RFC3066
 Looking for the Source Code?
 ----------------------------
 
-[The source code is distributed under Apache License 2.0 and it is available here.](https://github.com/obidea/semantika-core)
+[The Semantika API source code is distributed under Apache License 2.0 and it is available here.](https://github.com/obidea/semantika-core)
 
 Need Help?
 ----------
