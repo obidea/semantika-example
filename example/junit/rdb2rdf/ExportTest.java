@@ -12,7 +12,7 @@ import com.obidea.semantika.materializer.IMaterializerEngine;
 
 public class ExportTest
 {
-   private static final String CONFIGURATION_PATH = "example/rdb2rdf/application.cfg.xml"; //$NON-NLS-1$
+   private static final String CONFIGURATION_PATH = "example/junit/rdb2rdf/application.cfg.xml"; //$NON-NLS-1$
 
    private static ApplicationManager mAppManager;
 
