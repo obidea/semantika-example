@@ -25,7 +25,7 @@ Follow the commands below to add the example code files into the Semantika distr
 ```
 $ cd semantika-dist-<version>
 $ git init
-$ git remote add origin https://github.com/obidea/semantika-api.git
+$ git remote add origin https://github.com/obidea/semantika-example.git
 $ git fetch origin master
 $ git reset --hard FETCH_HEAD
 ```
