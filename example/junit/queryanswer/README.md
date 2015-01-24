@@ -28,6 +28,10 @@ Run the `java` command from the root directory.
 $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.junit.queryanswer.QueryAnswerTest
 ```
 
+#### Expected output
+
+All the 9 tests are passed, informing the expected answers are correct (in term of row count).
+
 Troubleshooting
 ---------------
 
