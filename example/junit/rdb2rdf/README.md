@@ -28,6 +28,15 @@ Run the `java` command from the root directory.
 $ java -cp .:*:jdbc/*:lib/* org.junit.runner.JUnitCore example.junit.rdb2rdf.ExportTest
 ```
 
+#### Expected output
+
+All the 4 tests are passed and producing 4 output files containing RDF data.
+
+```
+$ ls output*
+output.json  output.n3    output.ttl   output.xml
+```
+
 Troubleshooting
 ---------------
 
