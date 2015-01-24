@@ -37,6 +37,11 @@ $ cd empdb
 $ ./h2.sh
 ```
 
+#### Step 4: Run the examples
+
+Follow the instructions for each example code: [queryanswer](https://github.com/obidea/semantika-example/tree/master/example/junit/queryanswer), [rdb2rdf](https://github.com/obidea/semantika-example/tree/master/example/junit/rdb2rdf) and [emp-app](https://github.com/obidea/semantika-example/tree/master/example/demo).
+
+
 Code Examples
 -------------
 
